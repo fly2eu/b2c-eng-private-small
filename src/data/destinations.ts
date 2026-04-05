@@ -28,7 +28,7 @@ export const destinations: Destination[] = [
       'Jungfrau region & Lauterbrunnen Valley',
       'Lucerne & Chapel Bridge',
       'Glacier Express corridor',
-      'Gruyères & Lavaux Vineyards',
+      'Gruyères & Lavaux UNESCO Terraces',
     ],
     bestTime: 'May–October for mountain roads; December–March for winter landscapes',
     featured: true,
@@ -40,7 +40,7 @@ export const destinations: Destination[] = [
     name: 'France',
     tagline: 'Paris is a chapter. Provence is the whole book.',
     description:
-      "Beyond the Eiffel Tower, France unravels at a private pace — lavender fields in Provence, vineyard roads in Burgundy, the golden light of the Côte d'Azur. Custom French itineraries built around your interests.",
+      "Beyond the Eiffel Tower, France unravels at a private pace — lavender fields in Provence, cultural routes through Burgundy, the golden light of the Côte d'Azur. Custom French itineraries built around your interests.",
     heroImage:
       'https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=1920&q=85&auto=format',
     cardImage:
@@ -50,7 +50,7 @@ export const destinations: Destination[] = [
       'Provence lavender & markets',
       "Côte d'Azur & French Riviera",
       'Loire Valley châteaux',
-      'Alsace wine route',
+      'Alsace medieval villages route',
     ],
     bestTime: 'April–October; July–August for Provence lavender',
     featured: true,
@@ -68,7 +68,7 @@ export const destinations: Destination[] = [
     cardImage:
       'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80&auto=format',
     highlights: [
-      'Tuscany & Chianti vineyards',
+      'Tuscany & Chianti countryside',
       'Amalfi Coast drive',
       'Lake Como & Bellagio',
       'The Dolomites',

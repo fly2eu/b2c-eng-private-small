@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Logo from '@/components/shared/Logo'
 import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { Mail } from 'lucide-react'
@@ -85,9 +86,22 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Logo variant="light" size="sm" />
             <p className="mt-4 text-sm text-[#FAF7F0]/60 font-body leading-relaxed max-w-xs">
-              Private chauffeured European tours for Indian and GCC families. Your vehicle, your pace, your family.
+              Private chauffeured European tours for Indian and GCC travelers. Your vehicle, your pace, your way.
             </p>
-            <div className="mt-6 flex items-center gap-4">
+            {/* TIDS Certification Badge */}
+            <div className="mt-5 flex items-center gap-3">
+              <Image
+                src="/logos/tids-certification.png"
+                alt="IATA TIDS Certified"
+                width={60}
+                height={40}
+                style={{ height: 40, width: 'auto', opacity: 0.85 }}
+              />
+              <span className="text-xs text-[#FAF7F0]/50 font-body leading-tight">
+                IATA TIDS<br />Certified
+              </span>
+            </div>
+            <div className="mt-5 flex items-center gap-4">
               <a
                 href="https://instagram.com/elidetours"
                 target="_blank"

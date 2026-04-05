@@ -27,4 +27,6 @@ export interface Itinerary {
   tags: string[];
   featured: boolean;
   published: boolean;
+  /** Travel pace/style category — used for filtering and recommendations */
+  travelStyle?: 'slow' | 'grand-tour' | 'countryside' | 'city';
 }

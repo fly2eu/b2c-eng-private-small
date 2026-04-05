@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!tour) return {}
   return {
     title: `${tour.title} — ${tour.durationDays.min}-Day Private Tour`,
-    description: `${tour.description} From EUR ${tour.priceFromEur?.toLocaleString()} per person. Private Mercedes, 4-star hotels, 24/7 support.`,
+    description: `${tour.description} From EUR ${tour.priceFromEur?.toLocaleString()} per person. Private vehicle, 4-star hotels, 24/7 support.`,
     openGraph: {
       title: `${tour.title} | Elide Private European Tours`,
       description: tour.description,
@@ -101,11 +101,11 @@ export default async function TourDetailPage({ params }: Props) {
               </span>
               <span className="flex items-center gap-1.5 text-sm text-white/80 font-body">
                 <Car size={15} className="text-[#E8C04A]" />
-                Private Mercedes
+                Private vehicle
               </span>
               <span className="flex items-center gap-1.5 text-sm text-white/80 font-body">
                 <MapPin size={15} className="text-[#E8C04A]" />
-                {tour.hotelTier} hotels
+                Handpicked hotels
               </span>
             </div>
             {tour.priceFromEur && (
@@ -236,13 +236,14 @@ export default async function TourDetailPage({ params }: Props) {
                     <p className="font-heading text-4xl font-semibold text-[#DAA521]">
                       EUR {tour.priceFromEur?.toLocaleString()}
                     </p>
-                    <p className="text-sm text-[#8A8A7A] font-body mt-0.5">per person, based on twin sharing</p>
+                    <p className="text-sm text-[#8A8A7A] font-body mt-0.5">per person · indicative · twin sharing</p>
+                    <p className="text-xs text-[#8A8A7A] font-body mt-2">Indicative pricing — every journey is tailored. WhatsApp us for your personalised quote.</p>
                   </div>
                   <ul className="space-y-2 text-sm text-[#4A4A3C] font-body mb-5">
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />{tour.durationDays.min} days / {tour.durationDays.min - 1} nights</li>
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Groups of {tour.groupSize.min}–{tour.groupSize.max}</li>
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Private vehicle, no shared transfers</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />{tour.hotelTier} hotel accommodation</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Handpicked hotel accommodation</li>
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Daily breakfast included</li>
                   </ul>
                   <a

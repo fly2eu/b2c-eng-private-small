@@ -8,8 +8,9 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-const widths = { sm: 140, md: 180, lg: 220 }
-const heights = { sm: 36, md: 46, lg: 56 }
+// Doubled from original sizes as per Part 3B instructions
+const widths = { sm: 200, md: 260, lg: 320 }
+const heights = { sm: 52, md: 68, lg: 84 }
 
 export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
   const w = widths[size]

@@ -9,6 +9,7 @@ import WhatsAppButton from '@/components/forms/WhatsAppButton'
 
 const GROUP_SIZES = ['Just 2 of us', '3–4 people', '5–7 people', '8–12 people', '13–16 people', 'Not sure yet']
 const DESTINATIONS = ['Switzerland', 'France', 'Italy', 'Austria & Germany', 'Multi-country', 'Not sure — help me decide']
+const TRAVEL_STYLES = ['Slow & Experiential', 'Grand Tour', 'Countryside & Nature', 'City Explorer', 'Not sure — help me decide']
 
 export default function ContactClient() {
   const [submitted, setSubmitted] = useState(false)
@@ -20,6 +21,7 @@ export default function ContactClient() {
     dates: '',
     destinations: [] as string[],
     message: '',
+    travelStyle: '',
     whatsapp: true,
   })
 
@@ -176,6 +178,26 @@ export default function ContactClient() {
                   </div>
 
                   <div>
+                    <label className="form-label">Travel style (optional)</label>
+                    <div className="flex flex-wrap gap-2 mt-1">
+                      {TRAVEL_STYLES.map((style) => (
+                        <button
+                          key={style}
+                          type="button"
+                          onClick={() => setForm({ ...form, travelStyle: style })}
+                          className={`px-3 py-1.5 rounded-md text-sm font-body font-medium border transition-all ${
+                            form.travelStyle === style
+                              ? 'bg-[#12442E] text-white border-[#12442E]'
+                              : 'border-[#DDD8CC] text-[#4A4A3C] hover:border-[#12442E] hover:text-[#12442E]'
+                          }`}
+                        >
+                          {style}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
                     <label className="form-label">Anything else we should know? (optional)</label>
                     <textarea
                       className="form-input min-h-[90px] resize-none"
@@ -224,7 +246,7 @@ export default function ContactClient() {
                   Start a conversation now. We respond within 2 hours. Send us your travel dates and we&apos;ll start designing your trip.
                 </p>
                 <WhatsAppButton
-                  message="Hi, I'd like to plan a private European tour for my family. When can we talk?"
+                  message="Hi, I'd like to plan a private European tour. Can we talk about dates and itinerary?"
                   label="Open WhatsApp chat"
                   variant="large"
                 />
@@ -262,6 +284,19 @@ export default function ContactClient() {
                   hello@elide.com
                 </a>
                 <p className="text-xs text-[#8A8A7A] font-body mt-1">For formal enquiries and documents</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="bg-white rounded-xl p-5 border border-[#EDE8DE] flex items-center gap-4">
+                <div className="text-center flex-shrink-0">
+                  <div className="text-lg font-heading font-bold text-[#12442E]">IATA</div>
+                  <div className="text-xs font-body font-medium text-[#12442E]">TIDS</div>
+                </div>
+                <div>
+                  <p className="font-body text-sm font-semibold text-[#1A1A14]">IATA TIDS Certified</p>
+                  <p className="text-xs text-[#8A8A7A] font-body mt-0.5">Recognised travel industry credentials</p>
+                </div>
               </div>
             </ScrollReveal>
           </div>

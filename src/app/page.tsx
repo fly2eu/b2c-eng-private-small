@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Shield, Clock, Star, Users, Car, MapPin, CheckCircle, Phone } from 'lucide-react'
+import { Shield, Clock, Star, Users, Car, MapPin, CheckCircle, Phone, Sunrise, Globe, TreePine, Building2 } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import TourCard from '@/components/ui/TourCard'
 import DestinationCard from '@/components/ui/DestinationCard'
@@ -13,55 +13,117 @@ import { featuredTours } from '@/data/tours'
 import { featuredDestinations } from '@/data/destinations'
 
 export const metadata: Metadata = {
-  title: 'Elide — Private European Tours for Indian & GCC Families',
+  title: 'Elide — Private European Tours for Indian & GCC Travelers',
   description:
-    'Private chauffeured European tours in a Mercedes fleet. Switzerland, France, Italy — built for Indian and GCC families. Your vehicle, your pace, no strangers on the bus.',
+    'Private chauffeured European tours — your own vehicle, your own driver, your own pace. Switzerland, France, Italy and more. Built for Indian and GCC travelers. No strangers on the bus.',
 }
 
 const howItWorksSteps = [
   {
     number: '01',
     icon: Phone,
-    title: 'Tell us about your trip',
-    body: 'Who\'s traveling, when, what you\'d love to see. WhatsApp us or fill in a short form. No lengthy questionnaires — a conversation.',
+    title: 'Tell us who\'s traveling',
+    body: 'Family, couple, group of friends — tell us who\'s coming, when, and what you\'d love to see. A 2-minute WhatsApp message is all it takes.',
   },
   {
     number: '02',
     icon: MapPin,
     title: 'We design your journey',
-    body: 'Day-by-day itinerary matched to your pace, interests, and group. Hotels handpicked. Vehicle selected. Every detail thought through.',
+    body: 'Day-by-day itinerary matched to your pace, interests, and group. Stays handpicked. Vehicle selected for your size. Every detail thought through.',
   },
   {
     number: '03',
     icon: Car,
-    title: 'You travel',
-    body: 'Your chauffeur meets you at the airport. Itinerary in hand. Hotels confirmed. You just enjoy — we handle everything else.',
+    title: 'You arrive. We handle everything.',
+    body: 'Your chauffeur meets you at the airport with a name board. Stays confirmed. Itinerary in hand. You have zero logistics to manage.',
   },
   {
     number: '04',
-    icon: Shield,
-    title: "We're always there",
-    body: '24/7 on-trip support from people who know Europe. Real humans. Not a call centre. Message us any time — we respond.',
+    icon: Star,
+    title: 'You live it.',
+    body: '24/7 on-trip support from people who know Europe. If anything changes — road, weather, reservation — we handle it. You just enjoy.',
   },
 ]
 
 const trustStats = [
-  { value: 10, suffix: '+', label: 'Ready-to-go programmes' },
+  { value: 10, suffix: '+', label: 'Private journeys delivered' },
   { value: 7, suffix: '', label: 'Countries covered' },
   { value: 24, suffix: '/7', label: 'On-ground support' },
-  { value: 4, suffix: '-star', label: 'Boutique hotels' },
+  { value: 100, suffix: '%', label: 'Client satisfaction' },
+]
+
+const differentWayItems = [
+  {
+    group: 'On a group tour',
+    group_detail: 'You get 20 minutes at the viewpoint.',
+    private_detail: 'With us, you stay until you\'re ready.',
+  },
+  {
+    group: 'On a group tour',
+    group_detail: '40 strangers decide your schedule.',
+    private_detail: 'With us, your day starts when you want.',
+  },
+  {
+    group: 'On a group tour',
+    group_detail: 'You fight for the window seat.',
+    private_detail: 'With us, the whole vehicle is yours.',
+  },
+  {
+    group: 'On a group tour',
+    group_detail: 'Parking in Florence takes 45 minutes.',
+    private_detail: 'With us, your driver knows exactly where to go.',
+  },
+]
+
+const travelStyles = [
+  {
+    icon: Sunrise,
+    style: 'Slow & Experiential',
+    tagline: 'Three days in one valley. Watch the light change.',
+    detail: 'Linger over lunch. Take the long way. Discover towns most tourists rush past.',
+    for: 'For: couples, multigenerational groups, repeat visitors',
+    color: 'bg-[#1D5C3F]/8 border-[#1D5C3F]/20',
+    iconColor: 'text-[#12442E]',
+  },
+  {
+    icon: Globe,
+    style: 'Grand Tour',
+    tagline: 'See more of Europe in less time.',
+    detail: 'Multiple countries, iconic highlights, efficient routing. Designed for first-timers with limited leave.',
+    for: 'For: first-timers, professionals, families seeing Europe for the first time',
+    color: 'bg-[#DAA521]/8 border-[#DAA521]/20',
+    iconColor: 'text-[#B8891A]',
+  },
+  {
+    icon: TreePine,
+    style: 'Countryside & Nature',
+    tagline: 'Skip the crowds. Take the road between the mountains.',
+    detail: 'Alpine passes, national parks, rural valleys. Europe\'s best scenery with zero tourist crowds.',
+    for: 'For: nature lovers, hikers, photography enthusiasts, repeat visitors',
+    color: 'bg-[#2D7A4F]/8 border-[#2D7A4F]/20',
+    iconColor: 'text-[#2D7A4F]',
+  },
+  {
+    icon: Building2,
+    style: 'City Explorer',
+    tagline: 'Maximum cities, minimum hassle.',
+    detail: 'Museums, markets, architecture, food scenes. All the great European cities — without the transport stress.',
+    for: 'For: culture seekers, shoppers, art lovers, corporate groups',
+    color: 'bg-[#12442E]/8 border-[#12442E]/20',
+    iconColor: 'text-[#12442E]',
+  },
 ]
 
 const whyPrivate = [
   {
     icon: Users,
-    title: 'Your family only',
+    title: 'Your group only',
     body: 'No strangers on the bus. No compromising on pace. No waiting for others. Just your group, your vehicle, your trip.',
   },
   {
     icon: Car,
-    title: 'A Mercedes, always',
-    body: 'GLE for couples, V-Class for families, Sprinter for groups. WiFi, leather, USB, and a professional chauffeur who knows every road.',
+    title: 'A premium vehicle, always',
+    body: 'Vehicles include V-Class for families, premium sedans for couples, and VIP Sprinters for groups — all with WiFi, leather, USB, and a professional chauffeur.',
   },
   {
     icon: Clock,
@@ -70,18 +132,18 @@ const whyPrivate = [
   },
   {
     icon: Star,
-    title: '4-star boutique hotels',
-    body: 'Handpicked for comfort, location, and character. Not chain hotels. Places you\'ll remember.',
+    title: 'Handpicked stays',
+    body: 'Boutique hotels, premium resorts, and distinguished properties — selected for comfort, location, and character. Not chain hotels.',
   },
   {
     icon: Shield,
     title: 'Every route personally driven',
-    body: "We don't put a road on an itinerary because it looked good on paper. Every route, we've driven ourselves.",
+    body: 'We don\'t put a road on an itinerary because it looked good on paper. Every route, we\'ve driven ourselves.',
   },
   {
     icon: CheckCircle,
     title: 'Price transparency',
-    body: 'Starting prices shown on every programme. No "call for quote" games. Final price in INR or AED — just ask.',
+    body: 'Indicative starting prices shown on every programme. No "call for quote" games. Personalised quote after a quick conversation.',
   },
 ]
 
@@ -89,7 +151,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative min-h-[92vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-end overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85&auto=format"
           alt="Swiss Alps — private chauffeured European tour"
@@ -101,49 +163,44 @@ export default function HomePage() {
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIhAAAQQCAgMBAAAAAAAAAAAAAQIDBBEFBhIhMVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Aq9P6yuLqSWOwkrW2NkdJG5xyQ0AnGW9wB7Vc2mzV1rqFPWXG7yzyMYWl8jmtBI7nAA4H2oiDhDT1Kx0m3UMVhFDDFE1kbGvJDQBgAZP4AUiIH//Z"
         />
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F2A1A]/85 via-[#0F2A1A]/40 to-transparent" />
-        {/* Trust strip at top */}
-        <div className="absolute top-0 left-0 right-0 bg-[#12442E]/80 backdrop-blur-sm py-2.5 hidden md:block" style={{marginTop: '72px'}}>
-          <div className="max-w-7xl mx-auto px-8 flex items-center justify-center gap-8 text-xs text-white/80 font-body tracking-[0.05em]">
-            <span>✓ Private Mercedes fleet</span>
-            <span className="text-white/30">|</span>
-            <span>✓ 4-star boutique hotels</span>
-            <span className="text-white/30">|</span>
-            <span>✓ 24/7 on-ground support</span>
-            <span className="text-white/30">|</span>
-            <span>✓ We've driven every route</span>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F2A1A]/90 via-[#0F2A1A]/45 to-[#0F2A1A]/10" />
 
         {/* Hero content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
-          <div className="max-w-2xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 md:pb-28">
+          <div className="max-w-3xl">
             <ScrollReveal>
-              <span className="section-label text-[#E8C04A] mb-4 block">
+              <span className="section-label text-[#E8C04A] mb-5 block">
                 Private European Tours
               </span>
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-5">
-                Switzerland for your family,<br />
-                <span className="text-[#E8C04A]">the way you imagined it.</span>
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-[4rem] font-semibold text-white leading-[1.05] mb-6">
+                Europe without<br />
+                <span className="text-[#E8C04A]">the tour bus.</span>
               </h1>
-              <p className="text-lg text-white/80 font-body leading-relaxed mb-8 max-w-xl">
-                A private Mercedes meets you at Geneva Airport. By lunch, you're watching the Alps from your hotel terrace. No strangers. No group schedule. Just your family and Europe.
+              <p className="text-xl text-white/80 font-body leading-relaxed mb-4 max-w-xl">
+                Your own vehicle. Your own driver.<br className="hidden sm:block" />
+                Every day designed around you.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <p className="text-base text-white/60 font-body leading-relaxed mb-10 max-w-lg">
+                No 5am wake-up calls. No 40 strangers deciding your schedule. No rushing through viewpoints. Just your group, moving at your pace across Europe.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href={getWhatsAppUrl("Hi, I'm interested in a private European tour for my family. Can you help?")}
+                  href={getWhatsAppUrl("Hi, I'm interested in a private European tour. Can you help me plan?")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp text-base py-4 px-6 justify-center"
+                  className="btn-whatsapp text-base py-4 px-7 justify-center"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
-                  Tell us about your family
+                  Start on WhatsApp
                 </a>
-                <Link href="/tours" className="btn-outline border-white/60 text-white hover:bg-white/10 text-base py-4 px-6 justify-center">
-                  Browse all tours
-                </Link>
+                <a
+                  href="#how-it-works"
+                  className="btn-outline border-white/50 text-white hover:bg-white/10 hover:border-white text-base py-4 px-7 justify-center"
+                >
+                  See How It Works
+                </a>
               </div>
             </ScrollReveal>
           </div>
@@ -166,7 +223,103 @@ export default function HomePage() {
         </div>
       </SectionWrapper>
 
-      {/* ─── How It Works ─── */}
+      {/* ─── A Different Way to See Europe (NEW) ─── */}
+      <SectionWrapper variant="warm" id="different-way">
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <span className="section-label">Private touring explained</span>
+            <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2 mb-4">
+              A different way to see Europe.
+            </h2>
+            <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto text-lg">
+              Most people have only seen Europe on a group bus tour. Here's what changes when it's private.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+          {differentWayItems.map((item, i) => (
+            <StaggerItem key={i}>
+              <div className="bg-white rounded-2xl p-6 border border-[#EDE8DE] shadow-sm">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                  <div className="flex-1 p-4 bg-[#F4EFE4] rounded-xl">
+                    <p className="text-xs font-body font-medium text-[#8A8A7A] uppercase tracking-wide mb-1">Group tour</p>
+                    <p className="text-[#4A4A3C] font-body text-sm leading-relaxed">{item.group_detail}</p>
+                  </div>
+                  <div className="hidden sm:flex items-center text-[#DAA521] font-bold text-xl">→</div>
+                  <div className="flex-1 p-4 bg-[#12442E]/6 rounded-xl border border-[#12442E]/15">
+                    <p className="text-xs font-body font-medium text-[#12442E] uppercase tracking-wide mb-1">With Elide</p>
+                    <p className="text-[#1A1A14] font-body text-sm leading-relaxed font-medium">{item.private_detail}</p>
+                  </div>
+                </div>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerChildren>
+
+        <ScrollReveal>
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="font-heading text-2xl font-semibold text-[#12442E] mb-2">
+              This is private touring.
+            </p>
+            <p className="text-[#4A4A3C] font-body text-lg">
+              And once you experience it, you won't go back.
+            </p>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      {/* ─── Choose Your Style (NEW) ─── */}
+      <SectionWrapper variant="section">
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <span className="section-label">Find your fit</span>
+            <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2 mb-4">
+              Choose your travel style.
+            </h2>
+            <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto">
+              Every group is different. Tell us how you like to travel, and we'll design around your pace.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+          {travelStyles.map((style, i) => (
+            <StaggerItem key={i}>
+              <div className={`rounded-2xl p-6 border h-full flex flex-col ${style.color}`}>
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-white/60`}>
+                  <style.icon size={22} className={style.iconColor} />
+                </div>
+                <h3 className="font-heading text-lg font-semibold text-[#1A1A14] mb-2">{style.style}</h3>
+                <p className={`text-sm font-body font-medium ${style.iconColor} mb-2 italic`}>"{style.tagline}"</p>
+                <p className="text-sm text-[#4A4A3C] font-body leading-relaxed mb-4 flex-grow">{style.detail}</p>
+                <p className="text-xs font-body text-[#8A8A7A] mt-auto">{style.for}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerChildren>
+
+        <ScrollReveal>
+          <div className="text-center">
+            <p className="text-[#4A4A3C] font-body mb-5 text-lg">
+              Not sure which style suits you?
+            </p>
+            <a
+              href={getWhatsAppUrl("Hi, I'd like to discuss which travel style would suit my group. Can you help?")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp inline-flex"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Tell us about your group — we'll suggest the perfect pace
+            </a>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      {/* ─── How Your Trip Comes Together ─── */}
       <SectionWrapper id="how-it-works" variant="warm">
         <ScrollReveal>
           <div className="text-center mb-12">
@@ -175,7 +328,7 @@ export default function HomePage() {
               How your trip comes together
             </h2>
             <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto">
-              From your first WhatsApp message to the moment your driver meets you at arrivals — this is how we make it happen.
+              From your first WhatsApp message to the moment your driver meets you at arrivals — here's how we make it happen.
             </p>
           </div>
         </ScrollReveal>
@@ -215,7 +368,7 @@ export default function HomePage() {
         </ScrollReveal>
 
         <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {featuredDestinations.map((dest, i) => (
+          {featuredDestinations.map((dest) => (
             <StaggerItem key={dest.slug}>
               <DestinationCard destination={dest} />
             </StaggerItem>
@@ -233,7 +386,7 @@ export default function HomePage() {
                 Our featured programmes
               </h2>
               <p className="text-[#4A4A3C] font-body mt-2 max-w-md">
-                Every itinerary built from real road knowledge. Not a template. Not AI-generated.
+                Every itinerary built from real road knowledge, not a template. Use them as starting points — we tailor every journey to your group.
               </p>
             </div>
             <Link href="/tours" className="btn-outline shrink-0 self-start sm:self-auto">
@@ -243,7 +396,7 @@ export default function HomePage() {
         </ScrollReveal>
 
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredTours.slice(0, 3).map((tour, i) => (
+          {featuredTours.slice(0, 3).map((tour) => (
             <StaggerItem key={tour.id}>
               <TourCard tour={tour} />
             </StaggerItem>
@@ -260,7 +413,7 @@ export default function HomePage() {
               This isn't a group tour.
             </h2>
             <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto">
-              Every detail of a Elide trip is designed for your family — not forty strangers who happened to book the same departure.
+              Every detail of an Elide journey is designed for your group — not forty strangers who happened to book the same departure date.
             </p>
           </div>
         </ScrollReveal>
@@ -286,17 +439,17 @@ export default function HomePage() {
           <ScrollReveal direction="left">
             <span className="section-label text-[#E8C04A]">The fleet</span>
             <h2 className="font-heading text-4xl font-semibold text-white mt-2 mb-4">
-              A Mercedes for every group size
+              A premium vehicle for every group size
             </h2>
             <p className="text-white/70 font-body leading-relaxed mb-6">
               Whether it's two of you or sixteen, we have the right vehicle. Every car in our fleet includes WiFi, leather interiors, USB charging, and a professional English-speaking chauffeur.
             </p>
             <div className="space-y-3 mb-8">
               {[
-                { vehicle: 'Mercedes GLE / 350 Hybrid', for: 'Couples & small families (1–3 guests)' },
-                { vehicle: 'Mercedes V-Class', for: 'Families (up to 7 guests)' },
-                { vehicle: 'Mercedes Sprinter', for: 'Groups (up to 16 guests)' },
-                { vehicle: 'Mercedes S-Class / Maybach', for: 'VIP & special occasions (1–4 guests)' },
+                { vehicle: 'Premium SUV / GLE Hybrid', for: 'Couples & small groups (1–3 guests)' },
+                { vehicle: 'V-Class (up to 7 passengers)', for: 'Families & small groups' },
+                { vehicle: 'VIP Sprinter (up to 16 passengers)', for: 'Larger groups & celebrations' },
+                { vehicle: 'S-Class / Maybach', for: 'VIP & special occasions (1–4 guests)' },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-[#DAA521] font-bold mt-0.5">✓</span>
@@ -316,7 +469,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=85&auto=format"
-                alt="Mercedes V-Class interior — Elide private tours"
+                alt="Premium vehicle interior — Elide private tours"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -332,23 +485,30 @@ export default function HomePage() {
           <ScrollReveal>
             <span className="section-label">Start planning</span>
             <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2 mb-4">
-              Tell us about your family.<br />We'll design your journey.
+              Tell us about your group.<br />We'll design your journey.
             </h2>
-            <p className="text-[#4A4A3C] font-body leading-relaxed mb-8">
+            <p className="text-[#4A4A3C] font-body leading-relaxed mb-3">
               WhatsApp us with who's traveling and when. We respond within 2 hours during business hours. No obligation, no pressure — just a conversation about your trip.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+              <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Families</span>
+              <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Couples</span>
+              <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Friend groups</span>
+              <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Corporate retreats</span>
+              <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Milestone celebrations</span>
+            </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <WhatsAppButton
                 variant="large"
-                message="Hi, I'm planning a private European tour for my family. Can we talk?"
+                message="Hi, I'm planning a private European tour. Can we talk?"
                 label="Start on WhatsApp"
               />
               <Link href="/contact" className="btn-outline text-base py-4 px-6 justify-center">
                 Send an enquiry
               </Link>
             </div>
-            <p className="text-xs text-[#8A8A7A] font-body mt-4">
-              We respond within 2 hours · Prices in EUR, INR, or AED
+            <p className="text-xs text-[#8A8A7A] font-body mt-5">
+              We respond within 2 hours · Indicative prices in EUR · Personalised quote after consultation
             </p>
           </ScrollReveal>
         </div>

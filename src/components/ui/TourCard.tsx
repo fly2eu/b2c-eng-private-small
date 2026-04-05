@@ -10,6 +10,13 @@ interface TourCardProps {
   variant?: 'default' | 'featured'
 }
 
+const travelStyleLabels: Record<string, string> = {
+  'slow': 'Slow & Experiential',
+  'grand-tour': 'Grand Tour',
+  'countryside': 'Countryside & Nature',
+  'city': 'City Explorer',
+}
+
 export default function TourCard({ tour, className, variant = 'default' }: TourCardProps) {
   const whatsappMsg = encodeURIComponent(
     `Hi, I'm interested in the "${tour.title}" tour. Can you tell me more?`
@@ -33,8 +40,13 @@ export default function TourCard({ tour, className, variant = 'default' }: TourC
         />
         {/* Overlay on hover */}
         <div className="absolute inset-0 bg-[#0F2A1A]/0 group-hover:bg-[#0F2A1A]/20 transition-colors duration-300" />
-        {/* Tag badge */}
-        {tour.tags[0] && (
+        {/* Travel style badge */}
+        {tour.travelStyle && (
+          <span className="absolute top-3 left-3 badge badge-primary text-xs">
+            {travelStyleLabels[tour.travelStyle] ?? tour.travelStyle}
+          </span>
+        )}
+        {!tour.travelStyle && tour.tags[0] && (
           <span className="absolute top-3 left-3 badge badge-primary text-xs">
             {tour.tags[0]}
           </span>
@@ -86,9 +98,9 @@ export default function TourCard({ tour, className, variant = 'default' }: TourC
           <div>
             {tour.priceFromEur && (
               <>
-                <p className="price-from">From</p>
+                <p className="price-from">Starting from</p>
                 <p className="price-tag">EUR {tour.priceFromEur.toLocaleString()}</p>
-                <p className="text-[10px] text-[#8A8A7A] font-body">per person</p>
+                <p className="text-[10px] text-[#8A8A7A] font-body">per person · indicative</p>
               </>
             )}
           </div>

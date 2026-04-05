@@ -22,12 +22,12 @@ export const itineraries: Itinerary[] = [
       "Stein am Rhein medieval town",
     ],
     included: [
-      "5 nights 4-star hotel accommodation",
+      "5 nights handpicked hotel accommodation",
       "Daily breakfast",
-      "Private chauffeured transfers throughout (Mercedes V-Class or Sprinter)",
+      "Private chauffeured transfers throughout (V-Class or equivalent)",
       "English-speaking driver with local knowledge",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -43,6 +43,7 @@ export const itineraries: Itinerary[] = [
     tags: ["scenic", "cultural", "city breaks", "first-timer"],
     featured: true,
     published: true,
+    travelStyle: "grand-tour",
     days: [
       {
         dayNumber: 1,
@@ -118,12 +119,12 @@ export const itineraries: Itinerary[] = [
       "Pilatus, Titlis, and Jungfrau region",
     ],
     included: [
-      "8 nights mixed 4 and 5-star hotel accommodation",
+      "8 nights handpicked hotel accommodation (premium and superior properties)",
       "Daily breakfast",
-      "Private chauffeured transfers throughout (Mercedes V-Class or equivalent)",
+      "Private chauffeured transfers throughout (V-Class or equivalent)",
       "English-speaking driver-guide",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -139,6 +140,7 @@ export const itineraries: Itinerary[] = [
     tags: ["scenic", "cultural", "adventure", "grand tour"],
     featured: true,
     published: true,
+    travelStyle: "grand-tour",
     days: [
       {
         dayNumber: 1,
@@ -179,9 +181,9 @@ export const itineraries: Itinerary[] = [
         dayNumber: 5,
         title: "Gruyères → Montreux → Lausanne",
         description:
-          "Morning visit to Gruyères Castle and cheese factory (own account). Drive to Montreux via the Lavaux UNESCO vineyard terraces. Visit Chillon Castle (own account) before settling into Lausanne for the evening.",
+          "Morning visit to Gruyères Castle and cheese factory (own account). Drive to Montreux via the Lavaux UNESCO hillside terraces. Visit Chillon Castle (own account) before settling into Lausanne for the evening.",
         distanceKm: 95,
-        stops: ["Gruyères", "Lavaux Vineyards", "Chillon Castle"],
+        stops: ["Gruyères", "Lavaux UNESCO Terraces", "Chillon Castle"],
         overnightCity: "Lausanne",
       },
       {
@@ -241,12 +243,12 @@ export const itineraries: Itinerary[] = [
       "Rhine Falls and Stein am Rhein",
     ],
     included: [
-      "6 nights mixed 3 and 4-star hotel accommodation",
+      "6 nights handpicked hotel accommodation",
       "Daily breakfast",
       "Private chauffeured transfers throughout",
       "English-speaking driver with regional expertise",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -262,6 +264,7 @@ export const itineraries: Itinerary[] = [
     tags: ["wine & food", "cultural", "scenic"],
     featured: false,
     published: true,
+    travelStyle: "slow",
     days: [
       {
         dayNumber: 1,
@@ -309,9 +312,9 @@ export const itineraries: Itinerary[] = [
       },
       {
         dayNumber: 6,
-        title: "Lavaux Vineyards → Lausanne → Geneva",
+        title: "Lavaux UNESCO Terraces → Lausanne → Geneva",
         description:
-          "Drive west through the Lavaux UNESCO vineyard terraces — 800 years of continuous viticulture carved into steep hillsides above Lake Geneva. Wine tasting at a family domaine (own account). Afternoon in Lausanne, evening in Geneva.",
+          "Drive west through the Lavaux UNESCO hillside terraces — 800 years of continuous viticulture carved into steep hillsides above Lake Geneva. Wine tasting at a family domaine (own account). Afternoon in Lausanne, evening in Geneva.",
         distanceKm: 100,
         stops: ["Lavaux Terraces", "Lausanne waterfront"],
         overnightCity: "Geneva",
@@ -329,29 +332,29 @@ export const itineraries: Itinerary[] = [
 
   {
     id: "4",
-    slug: "swiss-cheese-wine-discovery",
-    title: "Swiss Cheese & Wine Discovery",
+    slug: "swiss-cheese-culinary-discovery",
+    title: "Swiss Cheese & Culinary Discovery",
     segment: "private",
     countries: ["Switzerland"],
     region: "Switzerland",
     durationDays: { min: 8, max: 8 },
     groupSize: { min: 2, max: 8 },
     description:
-      "An eight-day immersion into Switzerland's gastronomic identity — from Lavaux grand cru vineyards on Lake Geneva to Emmental cheese farms and Basel's Rhine-side dining.",
+      "An eight-day immersion into Switzerland's gastronomic identity — from Lavaux UNESCO hillside terraces above Lake Geneva to Emmental cheese farms and Basel's Rhine-side dining.",
     highlights: [
-      "Lavaux UNESCO terraced vineyards private tasting",
+      "Lavaux UNESCO terraced hillsides walk",
       "Gruyères cheese cellar and castle",
       "Emmental valley farm-to-table experience",
       "Solothurn — Switzerland's most beautiful Baroque city",
       "Basel Museum Night and Rhine swimming culture",
     ],
     included: [
-      "7 nights 4-star hotel accommodation",
+      "7 nights handpicked hotel accommodation",
       "Daily breakfast",
-      "Private chauffeured transfers throughout (Mercedes V-Class)",
+      "Private chauffeured transfers throughout (V-Class or equivalent)",
       "English-speaking driver-guide",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -367,6 +370,7 @@ export const itineraries: Itinerary[] = [
     tags: ["wine & food", "cultural", "scenic"],
     featured: false,
     published: true,
+    travelStyle: "slow",
     days: [
       {
         dayNumber: 1,
@@ -381,9 +385,9 @@ export const itineraries: Itinerary[] = [
         dayNumber: 2,
         title: "Lavaux Tasting Day → Montreux",
         description:
-          "Morning private tasting at a Lavaux domaine — Chasselas and Pinot Noir from vines above the lake. Afternoon in Montreux: the Chillon Castle (own account) and a lakeside promenade. Evening in one of the Riviera's best fish restaurants.",
+          "Morning walk through the Lavaux UNESCO terraced hillsides — 800 years of history carved into the slopes above the lake. Afternoon in Montreux: the Chillon Castle (own account) and a lakeside promenade. Evening in one of the Riviera's best fish restaurants.",
         distanceKm: 35,
-        stops: ["Lavaux domaine tasting", "Chillon Castle", "Montreux Jazz Walk"],
+        stops: ["Lavaux cultural walk", "Chillon Castle", "Montreux Jazz Walk"],
         overnightCity: "Montreux",
       },
       {
@@ -423,9 +427,9 @@ export const itineraries: Itinerary[] = [
       },
       {
         dayNumber: 7,
-        title: "Basel → Alsace Wine Route",
+        title: "Basel → Alsace Villages Route",
         description:
-          "Day trip across the French border into Alsace. Drive the wine route through Riquewihr, Kaysersberg, and Eguisheim — three of France's most beautiful villages. Wine tastings at family estates (own account). Return to Basel for dinner.",
+          "Day trip across the French border into Alsace. Drive the scenic village route through Riquewihr, Kaysersberg, and Eguisheim — three of France's most beautiful villages. Local market and artisan food experiences (own account). Return to Basel for dinner.",
         distanceKm: 110,
         stops: ["Riquewihr", "Kaysersberg", "Eguisheim"],
         overnightCity: "Basel",
@@ -461,12 +465,12 @@ export const itineraries: Itinerary[] = [
       "Geneva or Zürich airport-to-airport routing",
     ],
     included: [
-      "2 nights 4-star hotel accommodation",
+      "2 nights handpicked hotel accommodation",
       "Daily breakfast",
-      "Private chauffeured transfers throughout (Mercedes V-Class or GLE)",
+      "Private chauffeured transfers throughout (V-Class, GLE, or equivalent)",
       "English-speaking driver",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -482,6 +486,7 @@ export const itineraries: Itinerary[] = [
     tags: ["adventure", "scenic", "short break"],
     featured: true,
     published: true,
+    travelStyle: "countryside",
     days: [
       {
         dayNumber: 1,
@@ -534,12 +539,12 @@ export const itineraries: Itinerary[] = [
       "5-star hotels throughout",
     ],
     included: [
-      "3 nights 5-star hotel accommodation",
+      "3 nights premium hotel accommodation",
       "Daily breakfast",
       "Supercar hire for the duration (Ferrari or Lamborghini — model subject to availability)",
       "Fully scouted route notes and roadbook",
       "Lead or sweep vehicle available on request",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -608,7 +613,7 @@ export const itineraries: Itinerary[] = [
     durationDays: { min: 5, max: 5 },
     groupSize: { min: 2, max: 4 },
     description:
-      "Five days on the world's most dramatic coastal road — Positano, Ravello, Amalfi, and Pompeii — in a hire car, with a white-label roadbook and app from flyEurope's platform.",
+      "Five days on the world's most dramatic coastal road — Positano, Ravello, Amalfi, and Pompeii — in a hire car, with a curated roadbook and navigation app.",
     highlights: [
       "Positano's stacked pastel houses above the sea",
       "Ravello's garden villa concerts",
@@ -617,12 +622,12 @@ export const itineraries: Itinerary[] = [
       "Sorrento lemon groves and clifftop hotels",
     ],
     included: [
-      "4 nights 4-star hotel accommodation",
+      "4 nights handpicked hotel accommodation",
       "Daily breakfast",
       "Hire car (compact or standard — your agent confirms class)",
-      "flyEurope white-label roadbook and app",
+      "Curated roadbook and navigation app",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -707,12 +712,12 @@ export const itineraries: Itinerary[] = [
       "Aix-en-Provence markets and Cézanne heritage",
     ],
     included: [
-      "6 nights 4-star hotel accommodation",
+      "6 nights handpicked hotel accommodation",
       "Daily breakfast",
       "Hire car (standard or premium class)",
-      "flyEurope white-label roadbook and app",
+      "Curated roadbook and navigation app",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -817,12 +822,12 @@ export const itineraries: Itinerary[] = [
       "Rüdesheim Drosselgasse wine alley",
     ],
     included: [
-      "5 nights 3-star hotel accommodation (twin rooms, porterage included)",
+      "5 nights hotel accommodation (twin rooms, porterage included)",
       "Daily breakfast and dinner (half board)",
       "Full-size coach (49 seats, WiFi, air conditioning)",
       "Professional tour manager throughout",
       "Airport arrival & departure transfers by coach",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -916,12 +921,12 @@ export const itineraries: Itinerary[] = [
       "Chiemsee — Bavaria's inland sea with palace island",
     ],
     included: [
-      "4 nights 4-star hotel accommodation",
+      "4 nights handpicked hotel accommodation",
       "Daily breakfast",
-      "Private chauffeured transfers (Mercedes V-Class for 1–7 pax or Sprinter for 8–12 pax)",
+      "Private chauffeured transfers (V-Class for 1–7 pax or Sprinter for 8–12 pax)",
       "English-speaking driver-guide",
       "Airport arrival & departure transfers",
-      "24/7 flyEurope on-trip support",
+      "24/7 on-trip support",
     ],
     notIncluded: [
       "International flights",
@@ -938,6 +943,7 @@ export const itineraries: Itinerary[] = [
     tags: ["scenic", "adventure", "cultural"],
     featured: false,
     published: true,
+    travelStyle: "countryside",
     days: [
       {
         dayNumber: 1,
