@@ -138,8 +138,8 @@ The palette must feel warm, premium, and distinctly NOT like flyEurope or generi
 Explore one of these palettes (choose based on research):
 
 **Option A — Deep Emerald + Warm Gold**
-- Primary: deep emerald green (#1B4D3E range)
-- Accent: warm gold/amber (#C5963A range)
+- Primary: deep emerald green (#12442E range)
+- Accent: warm gold/amber (#DAA521 range)
 - Background: warm cream/ivory
 - This evokes: European forests, Swiss valleys, refined elegance
 
@@ -177,7 +177,7 @@ Explore one of these palettes (choose based on research):
 **Heading font:** Elegant serif or semi-serif. Must be on Google Fonts. Must NOT be Playfair Display (flyEurope uses it).
 
 Explore these options:
-- **Cormorant Garamond** — elegant, slightly condensed, beautiful at large sizes
+- **Robout** — elegant, slightly condensed, beautiful at large sizes
 - **Libre Baskerville** — classic, reliable, very readable
 - **Source Serif Pro** — modern serif, clean, multiple weights
 - **Lora** — friendly serif, great for editorial feel
@@ -186,7 +186,7 @@ Explore these options:
 **Body font:** Clean sans-serif. Must NOT be DM Sans (flyEurope uses it).
 
 Explore these options:
-- **Plus Jakarta Sans** — modern, geometric, warm
+- **Poppins** — modern, geometric, warm
 - **Outfit** — clean, contemporary, multiple weights
 - **Nunito Sans** — rounded, friendly, very readable on mobile
 - **Albert Sans** — modern, slightly condensed, elegant

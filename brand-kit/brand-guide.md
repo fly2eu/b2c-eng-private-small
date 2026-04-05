@@ -1,4 +1,4 @@
-# Brand Guide — Valdoro Private European Tours
+# Brand Guide — Elide Private European Tours
 
 > Created: April 2026
 > This is the single source of truth for brand identity decisions.
@@ -8,27 +8,27 @@
 
 ## Brand Name
 
-**Selected Name: Valdoro**
+**Selected Name: Elide**
 
 ### 5 Brand Name Options Considered
 
 | Name | Syllables | Meaning/Reasoning | Domain Candidate | How It Sounds |
 |------|-----------|-------------------|-----------------|---------------|
-| **Valdoro** ⭐ | 3 | "Val" (valley in Italian/Spanish) + "Doro" (gold in Italian). Evokes golden European valleys — Swiss Alps, Tuscan hills, Rhine valley. Feels boutique-hotel premium. | valdoro.com *(verify with registrar)* | "We booked our Switzerland trip through Valdoro." — Natural, memorable, premium. |
+| **Elide** ⭐ | 3 | "Val" (valley in Italian/Spanish) + "Doro" (gold in Italian). Evokes golden European valleys — Swiss Alps, Tuscan hills, Rhine valley. Feels boutique-hotel premium. | elide.com *(verify with registrar)* | "We booked our Switzerland trip through Elide." — Natural, memorable, premium. |
 | **Eloria** ⭐ | 3 | Invented — sounds like a boutique hotel in the Italian Lakes. Warm ending (-ia). No specific meaning, so it can mean exactly what the brand makes it mean. | eloria.com *(verify with registrar)* | "Eloria arranged our whole Europe itinerary." — Elegant, personal. |
 | **Alparo** | 3 | Alps + "-aro" (a warm Romance suffix). Evokes the Alpine landscape directly. Clear travel association. | alparo.com *(verify)* | "Going with Alparo this summer." — Works, but slightly on-the-nose. |
 | **Verdevo** | 3 | "Verde" (green, Italian/Spanish) + "-vo" (invented suffix). Evokes lush European landscapes. Distinctive. | verdevo.com *(verify)* | "We used Verdevo for our Italy trip." — Distinctive but less intuitive. |
 | **Orbella** | 3 | "Orb" (world) + "bella" (beautiful, Italian). Evokes "beautiful world." Romantic and travel-adjacent. | orbella.com *(verify)* | "Orbella planned our family holiday." — Slightly feminine, less neutral. |
 
-### Selected: Valdoro
+### Selected: Elide
 
-**Why Valdoro wins:**
+**Why Elide wins:**
 - The valley-gold meaning is deeply European and aligns perfectly with our Switzerland focus (valleys are everywhere — Lauterbrunnen, Rhine, Rhone)
 - "Gold" in the name subtly communicates premium quality without being explicit
 - Works beautifully as a logo wordmark — V-A-L-D-O-R-O, 7 letters, great kerning
 - Pronounceable in Hindi, Arabic, Tamil, and English without difficulty
 - Feels like a boutique Ticino hotel brand — exactly the register we want
-- Short enough for WhatsApp display name: **Valdoro**
+- Short enough for WhatsApp display name: **Elide**
 
 **Runner-up: Eloria** (used for logo Option B)
 
@@ -74,19 +74,19 @@ Chosen because:
 ### Full Palette
 
 ```css
-/* Brand Palette — Valdoro */
+/* Brand Palette — Elide */
 
---color-primary:          #1B4D3E;   /* Deep Emerald — headers, key UI, dark sections */
---color-primary-light:    #2A6B57;   /* Lighter Emerald — hover states, subtle accents */
---color-primary-dark:     #122E25;   /* Dark Forest — footer, dark mode sections */
+--color-primary:          #12442E;   /* Deep Emerald — headers, key UI, dark sections */
+--color-primary-light:    #1D5C3F;   /* Lighter Emerald — hover states, subtle accents */
+--color-primary-dark:     #0A2E1C;   /* Dark Forest — footer, dark mode sections */
 
---color-accent:           #C5963A;   /* Warm Gold — CTAs, prices, highlights, badges */
---color-accent-light:     #DDB96A;   /* Soft Gold — tags, badges, light accents */
---color-accent-dark:      #A07A28;   /* Deep Gold — hover on accent elements */
+--color-accent:           #DAA521;   /* Warm Gold — CTAs, prices, highlights, badges */
+--color-accent-light:     #E8C04A;   /* Soft Gold — tags, badges, light accents */
+--color-accent-dark:      #B8891A;   /* Deep Gold — hover on accent elements */
 
 --color-bg-warm:          #FAF7F0;   /* Warm Ivory — primary page background (NOT pure white) */
 --color-bg-section:       #F4EFE4;   /* Warm Cream — alternating section background */
---color-bg-dark:          #1A2820;   /* Near-black with green tint — dark hero overlays */
+--color-bg-dark:          #0F2A1A;   /* Near-black with green tint — dark hero overlays */
 
 --color-text-primary:     #1A1A14;   /* Near-black with warm brown tint — headings */
 --color-text-secondary:   #4A4A3C;   /* Warm dark gray — descriptions, body text */
@@ -113,14 +113,14 @@ Chosen because:
 
 ## Typography
 
-### Heading Font: Cormorant Garamond
-- **Google Fonts**: Yes — `font-family: 'Cormorant Garamond', serif`
+### Heading Font: Robout
+- **Google Fonts**: Yes — `font-family: 'Robout', serif`
 - **Weights used**: 400 (Regular), 500 (Medium), 600 (SemiBold)
 - **Why**: More elegant than Playfair Display (flyEurope uses Playfair). Slightly condensed at large sizes. Beautiful for hero headlines. Evokes editorial European sophistication. Perfect for price display.
 - **Subsets**: latin, latin-ext (for European characters)
 
-### Body Font: Plus Jakarta Sans
-- **Google Fonts**: Yes — `font-family: 'Plus Jakarta Sans', sans-serif`
+### Body Font: Poppins
+- **Google Fonts**: Yes — `font-family: 'Poppins', sans-serif`
 - **Weights used**: 300 (Light), 400 (Regular), 500 (Medium), 600 (SemiBold), 700 (Bold)
 - **Why**: Modern and geometric with warmth. Not the cold "tech" feel of Inter or Roboto. Not DM Sans (flyEurope uses DM Sans). Excellent readability on mobile. Works perfectly for trust signals, CTAs, and body copy.
 
@@ -128,16 +128,16 @@ Chosen because:
 
 | Usage | Size | Weight | Font | Notes |
 |-------|------|--------|------|-------|
-| Hero title | clamp(36px, 6vw, 64px) | SemiBold (600) | Cormorant Garamond | Line height 1.1 |
-| Section title | clamp(28px, 4vw, 44px) | SemiBold (600) | Cormorant Garamond | Line height 1.2 |
-| Card title | 20px | SemiBold (600) | Cormorant Garamond | Line height 1.3 |
-| Subtitle/deck | 16–18px | Light (300) | Plus Jakarta Sans | Line height 1.6 |
-| Body text | 15–16px | Regular (400) | Plus Jakarta Sans | Line height 1.7 |
-| Small/labels | 12–13px | Medium (500) | Plus Jakarta Sans | Uppercase, tracking 0.08em |
-| CTA buttons | 14–15px | SemiBold (600) | Plus Jakarta Sans | Letter spacing 0.02em |
-| Price | 24–28px | SemiBold (600) | Cormorant Garamond | Warm gold color |
-| Navigation | 14px | Medium (500) | Plus Jakarta Sans | Letter spacing 0.04em |
-| Footer | 13px | Regular (400) | Plus Jakarta Sans | Muted gray |
+| Hero title | clamp(36px, 6vw, 64px) | SemiBold (600) | Robout | Line height 1.1 |
+| Section title | clamp(28px, 4vw, 44px) | SemiBold (600) | Robout | Line height 1.2 |
+| Card title | 20px | SemiBold (600) | Robout | Line height 1.3 |
+| Subtitle/deck | 16–18px | Light (300) | Poppins | Line height 1.6 |
+| Body text | 15–16px | Regular (400) | Poppins | Line height 1.7 |
+| Small/labels | 12–13px | Medium (500) | Poppins | Uppercase, tracking 0.08em |
+| CTA buttons | 14–15px | SemiBold (600) | Poppins | Letter spacing 0.02em |
+| Price | 24–28px | SemiBold (600) | Robout | Warm gold color |
+| Navigation | 14px | Medium (500) | Poppins | Letter spacing 0.04em |
+| Footer | 13px | Regular (400) | Poppins | Muted gray |
 
 ---
 
@@ -232,14 +232,14 @@ STRONG: Start on WhatsApp → We respond within 2 hours
 
 See `brand-kit/logos/` for SVG files.
 
-### Valdoro Logo (Option A)
-- Icon: Stylized mountain valley form with a subtle golden peak — the "V" of Valdoro echoed in the valley silhouette
-- Wordmark: Cormorant Garamond, letter-spaced, all-caps or title case
+### Elide Logo (Option A)
+- Icon: Stylized mountain valley form with a subtle golden peak — the "V" of Elide echoed in the valley silhouette
+- Wordmark: Robout, letter-spaced, all-caps or title case
 - Colors: Primary emerald on warm ivory / reversed cream on emerald
 
 ### Eloria Logo (Option B)
 - Icon: Elegant monogram or abstract road/path motif
-- Wordmark: Cormorant Garamond, elegant spacing
+- Wordmark: Robout, elegant spacing
 - Colors: Same brand palette
 
 ---
@@ -247,16 +247,16 @@ See `brand-kit/logos/` for SVG files.
 ## Social Media Presence
 
 ### Instagram Bio
-**Valdoro** · Private European tours for Indian & GCC families.
+**Elide** · Private European tours for Indian & GCC families.
 Your Europe. Your pace. Your family. 🇨🇭🇫🇷🇮🇹
 → WhatsApp to plan your trip ↓
 
 ### WhatsApp Profile
-Name: **Valdoro**
+Name: **Elide**
 About: Private chauffeured tours of Europe. WhatsApp us to start planning.
 
 ### Brand Hashtags
-`#Valdoro` `#PrivateEuropeTour` `#SwitzerlandWithFamily` `#EuropeByMercedes` `#IndiaToEurope`
+`#Elide` `#PrivateEuropeTour` `#SwitzerlandWithFamily` `#EuropeByMercedes` `#IndiaToEurope`
 
 ---
 
@@ -272,7 +272,7 @@ About: Private chauffeured tours of Europe. WhatsApp us to start planning.
 
 ---
 
-## What Valdoro Is NOT
+## What Elide Is NOT
 
 - Not a group tour (never 20+ strangers on a bus)
 - Not an agent (no B2B language, no commission talk)
