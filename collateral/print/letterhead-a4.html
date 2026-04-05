@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Elide — Branded Letterhead (A4)</title>
+<style>
+  /* A4 at 96dpi: 794×1123px */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 794px; height: 1123px; background: white; }
+  .page {
+    width: 794px;
+    height: 1123px;
+    background: #FAF7F0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Top bar */
+  .header {
+    background: #12442E;
+    padding: 28px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #DAA521, #E8C04A, #DAA521);
+  }
+  /* Subtle pattern in header */
+  .header-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #DAA521 0px, #DAA521 1px,
+      transparent 1px, transparent 36px
+    );
+  }
+  .header-logo {
+    position: relative;
+    z-index: 1;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    letter-spacing: 8px;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .logo-sub {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .header-contact {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+  }
+  .header-contact p {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 3px;
+    letter-spacing: 0.5px;
+  }
+  .header-contact .wa {
+    color: #25D366;
+    font-weight: 600;
+  }
+
+  /* Content area */
+  .content {
+    flex: 1;
+    padding: 52px 60px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Date + ref line */
+  .meta-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .meta-line p {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: #8A8A7A;
+    letter-spacing: 0.5px;
+  }
+  .meta-line .ref {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: #8A8A7A;
+  }
+
+  /* Address block */
+  .address {
+    margin-bottom: 36px;
+  }
+  .address p {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #3A3A2A;
+    line-height: 1.8;
+  }
+
+  /* Subject line */
+  .subject-line {
+    margin-bottom: 32px;
+    border-left: 3px solid #DAA521;
+    padding-left: 14px;
+  }
+  .subject-line p {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8A8A7A;
+    margin-bottom: 4px;
+  }
+  .subject-line h3 {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1A1A14;
+    font-style: italic;
+  }
+
+  /* Body text area */
+  .body-text {
+    flex: 1;
+  }
+  .body-text p {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #4A4A3A;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+
+  /* Signature area */
+  .signature {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(26,26,20,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .sig-left {}
+  .sig-name {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #1A1A14;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  .sig-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8A8A7A;
+  }
+  .sig-logo {
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: rgba(26,26,20,0.2);
+    text-transform: uppercase;
+  }
+
+  /* Footer */
+  .footer {
+    background: #12442E;
+    padding: 16px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer p {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.5px;
+  }
+  .footer-logo {
+    font-family: 'Georgia', serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-pattern"></div>
+    <div class="header-logo">
+      <span class="logo">ELIDE</span>
+      <span class="logo-sub">Private European Tours</span>
+    </div>
+    <div class="header-contact">
+      <p class="wa">+971 50 000 0000 (WhatsApp)</p>
+      <p>hello@elide.com</p>
+      <p>elide.com</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="meta-line">
+      <p>5 April 2026</p>
+      <p class="ref">Ref: ELD-2026-0001</p>
+    </div>
+
+    <div class="address">
+      <p>Mr. Rajan Sharma</p>
+      <p>Dubai, United Arab Emirates</p>
+    </div>
+
+    <div class="subject-line">
+      <p>Re:</p>
+      <h3>Switzerland Wonderland — Private Tour Proposal</h3>
+    </div>
+
+    <div class="body-text">
+      <p>Dear Mr. Sharma,</p>
+      <p>Thank you for getting in touch with us about your upcoming European holiday. It was wonderful speaking with you about your plans, and we are delighted to present our proposal for the Switzerland Wonderland programme — a nine-day private chauffeured journey through some of Europe's most breathtaking landscapes.</p>
+      <p>Based on your group of five travellers and your preference for a mix of mountain scenery and cultural experiences, we have tailored this programme to include the Jungfrau region, Zermatt and the Matterhorn, the Engadine Valley, and a lakeside finale in Montreux before your departure from Geneva Airport.</p>
+      <p>All accommodation has been pre-reserved at four and five-star hotels, and your private Mercedes V-Class will be available exclusively for your family throughout the journey. Your chauffeur, who is fluent in English, will be your local guide and point of contact for any requests during the trip.</p>
+      <p>We would be happy to adjust the itinerary to your preferences before final confirmation. Please do not hesitate to reach out via WhatsApp for the fastest response.</p>
+      <p>Warm regards,</p>
+    </div>
+
+    <div class="signature">
+      <div class="sig-left">
+        <div class="sig-name">Arjun Mehta</div>
+        <div class="sig-title">Travel Consultant · Elide</div>
+      </div>
+      <div class="sig-logo">ELIDE</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Elide Private European Tours · hello@elide.com · elide.com · WhatsApp: +971 50 000 0000</p>
+    <span class="footer-logo">ELIDE</span>
+  </div>
+</div>
+</body>
+</html>

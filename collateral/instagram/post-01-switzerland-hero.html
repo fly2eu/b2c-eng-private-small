@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 01: Switzerland Hero</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Georgia', serif; }
+  .canvas {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    background: #12442E;
+    overflow: hidden;
+  }
+  .bg-image {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15,42,26,0.92) 0%, rgba(15,42,26,0.4) 50%, rgba(15,42,26,0.1) 100%);
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 64px;
+    color: white;
+  }
+  .label {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+  h1 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+  .tag-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .tag {
+    background: rgba(218,165,33,0.15);
+    border: 1px solid rgba(218,165,33,0.4);
+    color: #E8C04A;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+  .logo-area {
+    position: absolute;
+    top: 56px;
+    left: 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-text {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .logo-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #DAA521;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-image"></div>
+  <div class="overlay"></div>
+  <div class="logo-area">
+    <span class="logo-text">ELIDE</span>
+    <div class="logo-dot"></div>
+    <span style="font-family:Arial,sans-serif;font-size:11px;letter-spacing:2.5px;color:rgba(255,255,255,0.5);text-transform:uppercase;">Private European Tours</span>
+  </div>
+  <div class="content">
+    <div class="label">Switzerland</div>
+    <h1>Your family's first<br>morning in <em>the Alps.</em></h1>
+    <p class="subtitle">A private Mercedes meets you at Geneva Airport.<br>By lunch, the Eiger is visible from your hotel terrace.</p>
+    <div class="tag-row">
+      <span class="tag">Private touring</span>
+      <span class="tag">From EUR 1,590/person</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

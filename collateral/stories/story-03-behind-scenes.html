@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Story — Behind the Scenes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1920px;
+    position: relative;
+    background: #12442E;
+    overflow: hidden;
+  }
+  /* Subtle diagonal pattern */
+  .bg-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #DAA521 0px, #DAA521 1px,
+      transparent 1px, transparent 56px
+    );
+  }
+  .top-bar {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .tag {
+    background: rgba(218,165,33,0.15);
+    border: 1px solid rgba(218,165,33,0.35);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #DAA521;
+  }
+  /* Photo card */
+  .photo-card {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    right: 60px;
+    height: 680px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1569395737984-bdccf3d08a6a?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center;
+  }
+  .photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(18,68,46,0.9) 100%
+    );
+  }
+  .photo-caption {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    right: 28px;
+  }
+  .photo-caption-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 6px;
+  }
+  .photo-caption-text {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    color: white;
+    font-style: italic;
+  }
+  /* Content area */
+  .content {
+    position: absolute;
+    top: 940px;
+    left: 60px;
+    right: 60px;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+  }
+  h2 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .body-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    margin-bottom: 60px;
+  }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .check-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(218,165,33,0.15);
+    border: 1.5px solid rgba(218,165,33,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .check-icon::after {
+    content: '✓';
+    font-size: 12px;
+    color: #DAA521;
+    font-weight: 700;
+  }
+  /* Bottom */
+  .bottom-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 60px 120px;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 36px;
+  }
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+  }
+  .footer-url {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-pattern"></div>
+  <div class="top-bar">
+    <span class="logo">ELIDE</span>
+    <span class="tag">Behind the scenes</span>
+  </div>
+  <div class="photo-card">
+    <div class="photo-overlay"></div>
+    <div class="photo-caption">
+      <div class="photo-caption-label">Pre-tour reconnaissance</div>
+      <div class="photo-caption-text">Jungfraujoch approach, 3,454m</div>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Before you<br>arrive, we've<br>been <em>there.</em></h2>
+    <p class="body-text">Every route we recommend has been driven by our team. We don't build itineraries from a desk — we build them from experience.</p>
+    <ul class="checklist">
+      <li><span class="check-icon"></span>Hotel check-in procedures verified</li>
+      <li><span class="check-icon"></span>Scenic stops timed for golden hour</li>
+      <li><span class="check-icon"></span>Restaurants pre-checked for families</li>
+      <li><span class="check-icon"></span>Parking, access, and permits confirmed</li>
+    </ul>
+  </div>
+  <div class="bottom-area">
+    <div class="divider"></div>
+    <div class="footer-row">
+      <span class="footer-logo">ELIDE</span>
+      <span class="footer-url">elide.com</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 07: Italy Landscape</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: #1A0A0A;
+  }
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1534445801945-87bf9e6f5661?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center 35%;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(26,10,10,0.05) 0%,
+      rgba(26,10,10,0.15) 45%,
+      rgba(18,68,46,0.75) 80%,
+      rgba(18,68,46,0.97) 100%
+    );
+  }
+  .top-bar {
+    position: absolute;
+    top: 48px;
+    left: 52px;
+    right: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .country-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .flag-stripe {
+    display: flex;
+    gap: 2px;
+  }
+  .flag-stripe span {
+    width: 5px;
+    height: 14px;
+    border-radius: 1px;
+  }
+  .country-tag p {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 52px;
+  }
+  .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 72px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.0;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+  }
+  h2 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .locations {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .loc-tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-img"></div>
+  <div class="overlay"></div>
+  <div class="top-bar">
+    <span class="logo">ELIDE</span>
+    <div class="country-tag">
+      <div class="flag-stripe">
+        <span style="background:#009246"></span>
+        <span style="background:#EDEDED"></span>
+        <span style="background:#CE2B37"></span>
+      </div>
+      <p>Italy</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Grand Italian Tour · 10 days</div>
+    <h2>Rome.<br>Florence.<br><em>Tuscany.</em></h2>
+    <div class="locations">
+      <span class="loc-tag">Rome</span>
+      <span class="loc-tag">Florence</span>
+      <span class="loc-tag">Siena</span>
+      <span class="loc-tag">Venice</span>
+      <span class="loc-tag">Amalfi</span>
+      <span class="loc-tag">+ more</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 08: Tagline CTA</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    background: #12442E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bg-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #DAA521 0px,
+      #DAA521 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  }
+  .label {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.05;
+    color: white;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+  h2 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .subtitle {
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    color: rgba(255,255,255,0.65);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 64px;
+    line-height: 1.4;
+  }
+  .cta-box {
+    border: 1.5px solid rgba(218,165,33,0.5);
+    padding: 20px 52px;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .cta-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+  }
+  .footer-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .logo-text {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+  }
+  .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #DAA521;
+  }
+  .handle {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-pattern"></div>
+  <div class="label">Elide Private European Tours</div>
+  <h2>Your Europe.<br><em>Your pace.</em><br>Your family.</h2>
+  <p class="subtitle">Private chauffeured tours of Switzerland,<br>France, Italy and beyond.</p>
+  <div class="cta-box">
+    <p class="cta-text">WhatsApp us to start planning →</p>
+  </div>
+  <div class="footer-row">
+    <span class="logo-text">ELIDE</span>
+    <div class="dot"></div>
+    <span class="handle">elide.com · hello@elide.com</span>
+  </div>
+</div>
+</body>
+</html>

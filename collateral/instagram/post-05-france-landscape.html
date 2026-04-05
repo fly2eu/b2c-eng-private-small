@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 05: France Landscape</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: #0A1F12;
+  }
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center 40%;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(10,31,18,0.15) 0%,
+      rgba(10,31,18,0.0) 40%,
+      rgba(10,31,18,0.75) 75%,
+      rgba(10,31,18,0.95) 100%
+    );
+  }
+  .country-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #002395, #EDEDED, #ED2939);
+  }
+  .top-bar {
+    position: absolute;
+    top: 36px;
+    left: 52px;
+    right: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .dest-pill {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 52px;
+  }
+  .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 68px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+  h2 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .stats-row {
+    display: flex;
+    gap: 32px;
+  }
+  .stat {
+    border-left: 2px solid rgba(218,165,33,0.5);
+    padding-left: 14px;
+  }
+  .stat-num {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    color: #DAA521;
+    font-weight: 400;
+  }
+  .stat-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-img"></div>
+  <div class="overlay"></div>
+  <div class="country-banner"></div>
+  <div class="top-bar">
+    <span class="logo">ELIDE</span>
+    <span class="dest-pill">France</span>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Paris · Loire Valley · French Riviera</div>
+    <h2>France at<br>your <em>own pace.</em></h2>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-num">7 days</div>
+        <div class="stat-label">Classic France</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4-star</div>
+        <div class="stat-label">Boutique hotels</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Private</div>
+        <div class="stat-label">Mercedes throughout</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

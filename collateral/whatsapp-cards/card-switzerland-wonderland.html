@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide — Switzerland Wonderland Programme Card</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1920px;
+    position: relative;
+    background: #FAF7F0;
+    overflow: hidden;
+  }
+  /* Hero photo area */
+  .hero {
+    position: relative;
+    height: 680px;
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(15,42,26,0.2) 0%,
+      rgba(15,42,26,0.1) 50%,
+      rgba(15,42,26,0.7) 85%,
+      rgba(15,42,26,0.95) 100%
+    );
+  }
+  .hero-top {
+    position: absolute;
+    top: 44px;
+    left: 52px;
+    right: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .hero-tag {
+    background: #DAA521;
+    padding: 7px 18px;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #12442E;
+  }
+  .hero-content {
+    position: absolute;
+    bottom: 40px;
+    left: 52px;
+    right: 52px;
+  }
+  .hero-eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 10px;
+  }
+  .hero-title {
+    font-family: 'Georgia', serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 20px;
+  }
+  .hero-meta-item {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+  }
+  .hero-meta-item strong {
+    color: white;
+    font-weight: 600;
+  }
+  /* Body */
+  .body {
+    padding: 52px 52px 0;
+  }
+  /* Price block */
+  .price-block {
+    background: #12442E;
+    border-radius: 12px;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .price-left .from {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 4px;
+  }
+  .price-left .amount {
+    font-family: 'Georgia', serif;
+    font-size: 52px;
+    color: #DAA521;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .price-left .per-person {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+  }
+  .price-right {
+    text-align: right;
+  }
+  .price-right .includes-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .price-right .incl-item {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 4px;
+  }
+  /* Section label */
+  .section-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #12442E;
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+  /* Highlights */
+  .highlights {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  .highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #3A3A2A;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .hl-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #DAA521;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  /* Day strip */
+  .day-strip {
+    background: #12442E;
+    border-radius: 10px;
+    padding: 28px 36px;
+    margin-bottom: 40px;
+  }
+  .day-strip-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+  }
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .day-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+  .day-num {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 3px;
+  }
+  .day-city {
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    color: white;
+    font-style: italic;
+  }
+  /* Included strip */
+  .included-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .incl-chip {
+    background: rgba(18,68,46,0.06);
+    border: 1px solid rgba(18,68,46,0.15);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: #12442E;
+  }
+  /* CTA */
+  .cta-area {
+    padding: 0 52px 80px;
+  }
+  .cta-note {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: #8A8A7A;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .cta-btn {
+    background: #25D366;
+    padding: 26px 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .cta-url {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: rgba(26,26,20,0.35);
+    letter-spacing: 1px;
+  }
+  /* Divider */
+  .hr {
+    width: 100%;
+    height: 1px;
+    background: rgba(26,26,20,0.1);
+    margin: 36px 0;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-top">
+      <span class="logo">ELIDE</span>
+      <span class="hero-tag">Programme Card</span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Switzerland · 9 Days</div>
+      <div class="hero-title">Switzerland<br><em>Wonderland</em></div>
+      <div class="hero-meta">
+        <span class="hero-meta-item"><strong>9 nights</strong> · 4 &amp; 5-star</span>
+        <span class="hero-meta-item">Up to <strong>6 guests</strong></span>
+        <span class="hero-meta-item">Private Mercedes</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+    <!-- Price -->
+    <div class="price-block">
+      <div class="price-left">
+        <div class="from">Starting from</div>
+        <div class="amount">EUR 2,490</div>
+        <div class="per-person">per person · twin sharing</div>
+      </div>
+      <div class="price-right">
+        <div class="includes-label">Includes</div>
+        <div class="incl-item">8 nights hotel</div>
+        <div class="incl-item">Daily breakfast</div>
+        <div class="incl-item">All transfers</div>
+        <div class="incl-item">24/7 support</div>
+      </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="section-label">Tour highlights</div>
+    <ul class="highlights">
+      <li><span class="hl-dot"></span>Glacier Express corridor — Andermatt to Zermatt area</li>
+      <li><span class="hl-dot"></span>Matterhorn views from car-free Zermatt village</li>
+      <li><span class="hl-dot"></span>St. Moritz and the pristine Engadine Valley</li>
+      <li><span class="hl-dot"></span>Montreux lakefront and Chillon Castle</li>
+      <li><span class="hl-dot"></span>Pilatus, Titlis, and the Jungfrau region</li>
+    </ul>
+
+    <!-- Day strip -->
+    <div class="day-strip">
+      <div class="day-strip-label">Day by day</div>
+      <div class="day-grid">
+        <div class="day-item"><div class="day-num">Day 1</div><div class="day-city">Zürich → Lucerne</div></div>
+        <div class="day-item"><div class="day-num">Day 2</div><div class="day-city">Lucerne → Interlaken</div></div>
+        <div class="day-item"><div class="day-num">Day 3</div><div class="day-city">Jungfrau Region</div></div>
+        <div class="day-item"><div class="day-num">Day 4</div><div class="day-city">Interlaken → Zermatt</div></div>
+        <div class="day-item"><div class="day-num">Day 5</div><div class="day-city">Zermatt Day</div></div>
+        <div class="day-item"><div class="day-num">Day 6</div><div class="day-city">Zermatt → St. Moritz</div></div>
+        <div class="day-item"><div class="day-num">Day 7</div><div class="day-city">Engadine Valley</div></div>
+        <div class="day-item"><div class="day-num">Day 8</div><div class="day-city">St. Moritz → Montreux</div></div>
+        <div class="day-item"><div class="day-num">Day 9</div><div class="day-city">Montreux → Geneva</div></div>
+      </div>
+    </div>
+
+    <!-- Included chips -->
+    <div class="section-label">What's included</div>
+    <div class="included-row">
+      <span class="incl-chip">✓ 4 &amp; 5-star hotels</span>
+      <span class="incl-chip">✓ Daily breakfast</span>
+      <span class="incl-chip">✓ Private Mercedes</span>
+      <span class="incl-chip">✓ Airport transfers</span>
+      <span class="incl-chip">✓ English chauffeur</span>
+      <span class="incl-chip">✓ 24/7 support</span>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-area">
+    <div class="cta-note">Ready to book? Message us and we'll confirm availability within 2 hours.</div>
+    <div class="cta-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      WhatsApp us to enquire
+    </div>
+    <div class="cta-url">elide.com/tours/switzerland-wonderland</div>
+  </div>
+</div>
+</body>
+</html>

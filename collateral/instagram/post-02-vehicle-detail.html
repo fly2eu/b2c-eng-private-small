@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 02: Vehicle Detail</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    background: #FAF7F0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .left {
+    background: #12442E;
+    padding: 80px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .right {
+    position: relative;
+    overflow: hidden;
+  }
+  .right-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=90&auto=format');
+    background-size: cover;
+    background-position: center;
+  }
+  .label {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+  }
+  .features { list-style: none; }
+  .features li {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .features li::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: #DAA521;
+    flex-shrink: 0;
+  }
+  .logo-area {
+    position: absolute;
+    bottom: 48px;
+    left: 64px;
+  }
+  .logo-text {
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+  }
+  .img-caption {
+    position: absolute;
+    bottom: 32px;
+    left: 24px;
+    right: 24px;
+    background: rgba(15,42,26,0.8);
+    backdrop-filter: blur(8px);
+    padding: 16px 20px;
+    border-radius: 6px;
+  }
+  .img-caption p {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+  }
+  .img-caption span {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="left">
+    <div class="label">The fleet</div>
+    <h2>Your vehicle for the journey.</h2>
+    <ul class="features">
+      <li>Mercedes V-Class — seats 7</li>
+      <li>WiFi throughout the drive</li>
+      <li>Leather, USB, bottled water</li>
+      <li>Professional English-speaking chauffeur</li>
+      <li>Fully insured and licensed</li>
+    </ul>
+    <div class="logo-area">
+      <span class="logo-text">ELIDE · Private European Tours</span>
+    </div>
+  </div>
+  <div class="right">
+    <div class="right-img"></div>
+    <div class="img-caption">
+      <p>Mercedes V-Class interior</p>
+      <span>Standard for all family programmes</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

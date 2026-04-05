@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Elide — Switzerland Wonderland One-Pager (A4)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 794px; height: 1123px; background: white; font-size: 12px; }
+  .page {
+    width: 794px;
+    height: 1123px;
+    background: #FAF7F0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hero strip */
+  .hero {
+    position: relative;
+    height: 260px;
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=90&auto=format');
+    background-size: cover;
+    background-position: center 40%;
+    flex-shrink: 0;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(18,68,46,0.92) 45%, rgba(18,68,46,0.3) 100%);
+  }
+  .hero-content {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 40px;
+  }
+  .hero-eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 8px;
+  }
+  .hero-title {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .hero-meta-row {
+    display: flex;
+    gap: 16px;
+  }
+  .hero-meta-item {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+  }
+  .hero-meta-item strong { color: white; font-weight: 600; }
+
+  /* Logo in hero */
+  .hero-logo {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+  }
+
+  /* Gold bar */
+  .gold-bar {
+    height: 3px;
+    background: linear-gradient(to right, #DAA521, #E8C04A, #DAA521);
+    flex-shrink: 0;
+  }
+
+  /* Body */
+  .body {
+    flex: 1;
+    padding: 24px 40px 0;
+    display: flex;
+    gap: 28px;
+    overflow: hidden;
+  }
+
+  /* Left column */
+  .col-left { flex: 1.1; }
+  /* Right column */
+  .col-right { width: 240px; flex-shrink: 0; }
+
+  /* Price block */
+  .price-block {
+    background: #12442E;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price-block .from {
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 2px;
+  }
+  .price-block .amount {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    color: #DAA521;
+    line-height: 1;
+  }
+  .price-block .per {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 2px;
+  }
+  .price-block-right { text-align: right; }
+  .price-block-right p {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 2px;
+  }
+
+  /* Section */
+  .section-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #12442E;
+    opacity: 0.5;
+    margin-bottom: 8px;
+    margin-top: 16px;
+  }
+
+  /* Day list */
+  .day-list { list-style: none; }
+  .day-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 6px;
+    align-items: flex-start;
+  }
+  .day-num-badge {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: rgba(18,68,46,0.08);
+    border: 1px solid rgba(18,68,46,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    color: #12442E;
+    flex-shrink: 0;
+  }
+  .day-text { flex: 1; }
+  .day-title-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: #1A1A14;
+    line-height: 1.4;
+  }
+  .day-stops {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    color: #8A8A7A;
+    margin-top: 1px;
+  }
+
+  /* Right col: Overview + Includes */
+  .overview-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: #4A4A3A;
+    line-height: 1.7;
+    margin-bottom: 2px;
+  }
+
+  .incl-list { list-style: none; }
+  .incl-item {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: #3A3A2A;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    line-height: 1.4;
+  }
+  .incl-check {
+    color: #12442E;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .not-incl-list { list-style: none; }
+  .not-incl-item {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    color: #8A8A7A;
+    margin-bottom: 3px;
+    display: flex;
+    gap: 6px;
+    line-height: 1.4;
+  }
+  .not-incl-dash { color: #8A8A7A; flex-shrink: 0; }
+
+  /* QR + CTA */
+  .cta-box {
+    background: #12442E;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .qr-placeholder {
+    width: 56px; height: 56px;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+  .cta-text {}
+  .cta-text .wa-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 3px;
+  }
+  .cta-text .wa-action {
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    color: white;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  .cta-text .wa-num {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: #25D366;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    background: #12442E;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .footer p {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.3px;
+  }
+  .footer-logo {
+    font-family: 'Georgia', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Switzerland · 9 Days · Private Tour</div>
+      <div class="hero-title">Switzerland<br><em>Wonderland</em></div>
+      <div class="hero-meta-row">
+        <span class="hero-meta-item"><strong>9 nights</strong> · 4 &amp; 5-star</span>
+        <span class="hero-meta-item">Max <strong>6 guests</strong></span>
+      </div>
+    </div>
+    <div class="hero-logo">ELIDE</div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <!-- Body -->
+  <div class="body">
+    <!-- Left -->
+    <div class="col-left">
+      <div class="price-block">
+        <div>
+          <div class="from">From</div>
+          <div class="amount">EUR 2,490</div>
+          <div class="per">per person · twin sharing</div>
+        </div>
+        <div class="price-block-right">
+          <p>8 nights hotel</p>
+          <p>Daily breakfast</p>
+          <p>All transfers</p>
+          <p>24/7 support</p>
+        </div>
+      </div>
+
+      <div class="section-title">Day by Day</div>
+      <ul class="day-list">
+        <li class="day-item"><span class="day-num-badge">1</span><div class="day-text"><div class="day-title-text">Zürich Arrival → Lucerne</div><div class="day-stops">Chapel Bridge · Lake Lucerne</div></div></li>
+        <li class="day-item"><span class="day-num-badge">2</span><div class="day-text"><div class="day-title-text">Lucerne Day — Titlis Excursion</div><div class="day-stops">Engelberg · Titlis summit · Old Town</div></div></li>
+        <li class="day-item"><span class="day-num-badge">3</span><div class="day-text"><div class="day-title-text">Lucerne → Interlaken</div><div class="day-stops">Brienzersee · Giessbach Falls</div></div></li>
+        <li class="day-item"><span class="day-num-badge">4</span><div class="day-text"><div class="day-title-text">Jungfrau Region</div><div class="day-stops">Lauterbrunnen · Grindelwald · Eiger views</div></div></li>
+        <li class="day-item"><span class="day-num-badge">5</span><div class="day-text"><div class="day-title-text">Interlaken → Zermatt</div><div class="day-stops">Rhône Valley · Gletsch · Car-free Zermatt</div></div></li>
+        <li class="day-item"><span class="day-num-badge">6</span><div class="day-text"><div class="day-title-text">Zermatt — Matterhorn Day</div><div class="day-stops">Gornergrat railway · Matterhorn views</div></div></li>
+        <li class="day-item"><span class="day-num-badge">7</span><div class="day-text"><div class="day-title-text">Zermatt → St. Moritz</div><div class="day-stops">Furka Pass · Engadine Valley</div></div></li>
+        <li class="day-item"><span class="day-num-badge">8</span><div class="day-text"><div class="day-title-text">St. Moritz → Montreux</div><div class="day-stops">Maloja Pass · Lake Geneva · Chillon Castle</div></div></li>
+        <li class="day-item"><span class="day-num-badge">9</span><div class="day-text"><div class="day-title-text">Montreux → Geneva Departure</div><div class="day-stops">Lavaux vineyards · Geneva Airport</div></div></li>
+      </ul>
+    </div>
+
+    <!-- Right -->
+    <div class="col-right">
+      <div class="section-title">Overview</div>
+      <p class="overview-text">Nine days through every corner of Switzerland — from the Bernese Alps to the Engadine. Built for families who want to see it all, without rushing.</p>
+
+      <div class="section-title">What's Included</div>
+      <ul class="incl-list">
+        <li class="incl-item"><span class="incl-check">✓</span>8 nights 4 &amp; 5-star hotels</li>
+        <li class="incl-item"><span class="incl-check">✓</span>Daily breakfast</li>
+        <li class="incl-item"><span class="incl-check">✓</span>Private Mercedes V-Class</li>
+        <li class="incl-item"><span class="incl-check">✓</span>Airport arrival &amp; departure</li>
+        <li class="incl-item"><span class="incl-check">✓</span>English-speaking chauffeur</li>
+        <li class="incl-item"><span class="incl-check">✓</span>All inter-city transfers</li>
+        <li class="incl-item"><span class="incl-check">✓</span>24/7 on-trip support</li>
+      </ul>
+
+      <div class="section-title">Not Included</div>
+      <ul class="not-incl-list">
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>International flights</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Travel insurance</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Lunches and dinners</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Attraction entrance fees</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Tips and gratuities</li>
+      </ul>
+
+      <div class="cta-box">
+        <div class="qr-placeholder">📱</div>
+        <div class="cta-text">
+          <div class="wa-label">Ready to book?</div>
+          <div class="wa-action">WhatsApp us to start</div>
+          <div class="wa-num">+971 50 000 0000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Elide Private European Tours · hello@elide.com · elide.com · +971 50 000 0000</p>
+    <span class="footer-logo">ELIDE</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 03: Experiential Viewpoint</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    background: #0F2A1A;
+    overflow: hidden;
+  }
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(15,42,26,0.1) 0%,
+      rgba(15,42,26,0.2) 50%,
+      rgba(15,42,26,0.85) 85%,
+      rgba(15,42,26,0.98) 100%
+    );
+  }
+  .top-bar {
+    position: absolute;
+    top: 48px;
+    left: 52px;
+    right: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .tag {
+    background: rgba(218,165,33,0.9);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #12442E;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 52px;
+  }
+  .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 14px;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  h2 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .caption {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+    max-width: 520px;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-img"></div>
+  <div class="overlay"></div>
+  <div class="top-bar">
+    <span class="logo">ELIDE</span>
+    <span class="tag">The Moment</span>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Swiss Alps · Jungfraujoch</div>
+    <h2>No schedule.<br>Just <em>this view.</em></h2>
+    <p class="caption">Your chauffeur waits while you take it all in. There's no group to rush back to. No bus horn. Just your family and the Alps.</p>
+  </div>
+</div>
+</body>
+</html>

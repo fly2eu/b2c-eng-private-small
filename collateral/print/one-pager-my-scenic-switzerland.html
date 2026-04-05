@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Elide — My Scenic Switzerland One-Pager (A4)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 794px; height: 1123px; background: white; }
+  .page {
+    width: 794px; height: 1123px;
+    background: #FAF7F0;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .hero {
+    position: relative; height: 240px;
+    background-image: url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=900&q=90&auto=format');
+    background-size: cover; background-position: center;
+    flex-shrink: 0;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(18,68,46,0.94) 40%, rgba(18,68,46,0.2) 100%);
+  }
+  .hero-content {
+    position: absolute; top: 0; bottom: 0; left: 0;
+    width: 55%; display: flex; flex-direction: column;
+    justify-content: center; padding: 28px 36px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #12442E;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+  .hero-eyebrow {
+    font-family: 'Arial', sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase; color: #DAA521; margin-bottom: 7px;
+  }
+  .hero-title {
+    font-family: 'Georgia', serif; font-size: 32px; font-weight: 400;
+    color: white; line-height: 1.1; letter-spacing: -0.3px; margin-bottom: 10px;
+  }
+  .hero-title em { font-style: italic; color: #E8C04A; }
+  .hero-meta-row { display: flex; gap: 14px; }
+  .hero-meta-item {
+    font-family: 'Arial', sans-serif; font-size: 10px; color: rgba(255,255,255,0.55);
+  }
+  .hero-meta-item strong { color: white; font-weight: 600; }
+  .hero-logo {
+    position: absolute; top: 18px; right: 24px;
+    font-family: 'Georgia', serif; font-size: 13px; letter-spacing: 4px;
+    color: rgba(255,255,255,0.45); text-transform: uppercase;
+  }
+  .gold-bar { height: 3px; background: linear-gradient(to right, #DAA521, #E8C04A, #DAA521); flex-shrink: 0; }
+
+  .body { flex: 1; padding: 20px 36px 0; display: flex; gap: 24px; overflow: hidden; }
+  .col-left { flex: 1.1; }
+  .col-right { width: 230px; flex-shrink: 0; }
+
+  .price-block {
+    background: #12442E; border-radius: 8px; padding: 14px 18px;
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;
+  }
+  .price-block .from { font-family: 'Arial', sans-serif; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 2px; }
+  .price-block .amount { font-family: 'Georgia', serif; font-size: 26px; color: #DAA521; line-height: 1; }
+  .price-block .per { font-family: 'Arial', sans-serif; font-size: 9px; color: rgba(255,255,255,0.3); margin-top: 2px; }
+  .price-block-right { text-align: right; }
+  .price-block-right p { font-family: 'Arial', sans-serif; font-size: 10px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+
+  .section-title {
+    font-family: 'Arial', sans-serif; font-size: 8px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; color: #12442E;
+    opacity: 0.5; margin-bottom: 8px; margin-top: 14px;
+  }
+
+  .route-row {
+    display: flex; align-items: center; gap: 0;
+    background: white; border: 1px solid rgba(18,68,46,0.1);
+    border-radius: 6px; padding: 12px 16px; margin-bottom: 14px; overflow: hidden;
+  }
+  .rc { flex: 1; text-align: center; }
+  .rc-name { font-family: 'Georgia', serif; font-size: 12px; color: #1A1A14; font-style: italic; }
+  .rc-day { font-family: 'Arial', sans-serif; font-size: 9px; color: #8A8A7A; margin-top: 2px; }
+  .ra { font-family: 'Arial', sans-serif; font-size: 10px; color: #DAA521; padding: 0 2px; flex-shrink: 0; }
+
+  .day-list { list-style: none; }
+  .day-item { display: flex; gap: 9px; margin-bottom: 6px; align-items: flex-start; }
+  .day-num-badge {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: rgba(18,68,46,0.07); border: 1px solid rgba(18,68,46,0.14);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Arial', sans-serif; font-size: 7px; font-weight: 700; color: #12442E; flex-shrink: 0;
+  }
+  .day-text {}
+  .day-title-text { font-family: 'Arial', sans-serif; font-size: 10px; font-weight: 600; color: #1A1A14; line-height: 1.4; }
+  .day-stops { font-family: 'Arial', sans-serif; font-size: 9px; color: #8A8A7A; margin-top: 1px; }
+
+  .overview-text { font-family: 'Arial', sans-serif; font-size: 10px; color: #4A4A3A; line-height: 1.7; }
+
+  .incl-list { list-style: none; }
+  .incl-item {
+    font-family: 'Arial', sans-serif; font-size: 10px; color: #3A3A2A;
+    margin-bottom: 4px; display: flex; align-items: flex-start; gap: 6px; line-height: 1.4;
+  }
+  .incl-check { color: #12442E; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  .not-incl-list { list-style: none; }
+  .not-incl-item {
+    font-family: 'Arial', sans-serif; font-size: 9px; color: #8A8A7A;
+    margin-bottom: 3px; display: flex; gap: 5px; line-height: 1.4;
+  }
+  .not-incl-dash { color: #8A8A7A; flex-shrink: 0; }
+
+  .cta-box {
+    background: #12442E; border-radius: 7px; padding: 14px;
+    margin-top: 12px; display: flex; align-items: center; gap: 12px;
+  }
+  .qr-placeholder { width: 52px; height: 52px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+  .cta-text .wa-label { font-family: 'Arial', sans-serif; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 3px; }
+  .cta-text .wa-action { font-family: 'Georgia', serif; font-size: 12px; color: white; font-style: italic; margin-bottom: 3px; }
+  .cta-text .wa-num { font-family: 'Arial', sans-serif; font-size: 10px; color: #25D366; font-weight: 600; }
+
+  .footer {
+    background: #12442E; padding: 9px 36px;
+    display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;
+  }
+  .footer p { font-family: 'Arial', sans-serif; font-size: 9px; color: rgba(255,255,255,0.3); }
+  .footer-logo { font-family: 'Georgia', serif; font-size: 10px; letter-spacing: 3px; color: rgba(255,255,255,0.2); text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">✦ Most popular first trip</span>
+      <div class="hero-eyebrow">Switzerland · 6 Days · Private Tour</div>
+      <div class="hero-title">My Scenic<br><em>Switzerland</em></div>
+      <div class="hero-meta-row">
+        <span class="hero-meta-item"><strong>5 nights</strong> · 4-star</span>
+        <span class="hero-meta-item">Max <strong>7 guests</strong></span>
+        <span class="hero-meta-item">Geneva → Zürich</span>
+      </div>
+    </div>
+    <div class="hero-logo">ELIDE</div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <div class="body">
+    <div class="col-left">
+      <div class="price-block">
+        <div>
+          <div class="from">From</div>
+          <div class="amount">EUR 1,590</div>
+          <div class="per">per person · twin sharing</div>
+        </div>
+        <div class="price-block-right">
+          <p>5 nights 4-star</p>
+          <p>Daily breakfast</p>
+          <p>All transfers</p>
+          <p>24/7 support</p>
+        </div>
+      </div>
+
+      <div class="section-title">The Route</div>
+      <div class="route-row">
+        <div class="rc"><div class="rc-name">Geneva</div><div class="rc-day">Arrive Day 1</div></div>
+        <div class="ra">→</div>
+        <div class="rc"><div class="rc-name">Interlaken</div><div class="rc-day">Days 1–2</div></div>
+        <div class="ra">→</div>
+        <div class="rc"><div class="rc-name">Lucerne</div><div class="rc-day">Days 3–4</div></div>
+        <div class="ra">→</div>
+        <div class="rc"><div class="rc-name">Zürich</div><div class="rc-day">Day 5–6</div></div>
+      </div>
+
+      <div class="section-title">Day by Day</div>
+      <ul class="day-list">
+        <li class="day-item"><span class="day-num-badge">1</span><div class="day-text"><div class="day-title-text">Geneva Arrival → Interlaken</div><div class="day-stops">Gruyères village · Thun lakefront</div></div></li>
+        <li class="day-item"><span class="day-num-badge">2</span><div class="day-text"><div class="day-title-text">Jungfrau Region &amp; Lauterbrunnen Valley</div><div class="day-stops">72 waterfalls · Grindelwald · Eiger views</div></div></li>
+        <li class="day-item"><span class="day-num-badge">3</span><div class="day-text"><div class="day-title-text">Interlaken → Lucerne</div><div class="day-stops">Lake Lucerne · Chapel Bridge · Old Town</div></div></li>
+        <li class="day-item"><span class="day-num-badge">4</span><div class="day-text"><div class="day-title-text">Mount Pilatus &amp; Lake Lucerne Cruise</div><div class="day-stops">Cable car · Cogwheel railway · Lake boat</div></div></li>
+        <li class="day-item"><span class="day-num-badge">5</span><div class="day-text"><div class="day-title-text">Lucerne → Rhine Falls → Zürich</div><div class="day-stops">Europe's largest waterfall · Stein am Rhein</div></div></li>
+        <li class="day-item"><span class="day-num-badge">6</span><div class="day-text"><div class="day-title-text">Zürich Departure</div><div class="day-stops">Bahnhofstrasse · Altstadt · Airport transfer</div></div></li>
+      </ul>
+    </div>
+
+    <div class="col-right">
+      <div class="section-title">Overview</div>
+      <p class="overview-text">Six days through Switzerland's greatest highlights — ideal for first-time visitors. From lakeside cities to Alpine valleys, at your own pace with a private Mercedes and English-speaking chauffeur.</p>
+
+      <div class="section-title">What's Included</div>
+      <ul class="incl-list">
+        <li class="incl-item"><span class="incl-check">✓</span>5 nights 4-star hotels</li>
+        <li class="incl-item"><span class="incl-check">✓</span>Daily breakfast</li>
+        <li class="incl-item"><span class="incl-check">✓</span>Private Mercedes V-Class</li>
+        <li class="incl-item"><span class="incl-check">✓</span>Airport arrival &amp; departure</li>
+        <li class="incl-item"><span class="incl-check">✓</span>English chauffeur guide</li>
+        <li class="incl-item"><span class="incl-check">✓</span>24/7 on-trip support</li>
+      </ul>
+
+      <div class="section-title">Not Included</div>
+      <ul class="not-incl-list">
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>International flights</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Travel insurance</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Lunches and dinners</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Attraction fees</li>
+        <li class="not-incl-item"><span class="not-incl-dash">–</span>Tips and gratuities</li>
+      </ul>
+
+      <div class="cta-box">
+        <div class="qr-placeholder">📱</div>
+        <div class="cta-text">
+          <div class="wa-label">Ready to book?</div>
+          <div class="wa-action">WhatsApp us to start</div>
+          <div class="wa-num">+971 50 000 0000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Elide Private European Tours · hello@elide.com · elide.com · +971 50 000 0000</p>
+    <span class="footer-logo">ELIDE</span>
+  </div>
+</div>
+</body>
+</html>

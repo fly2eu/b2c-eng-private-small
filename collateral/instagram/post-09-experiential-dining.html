@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 09: Experiential Dining</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: #1A0F0A;
+  }
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(26,15,10,0.2) 0%,
+      rgba(26,15,10,0.1) 35%,
+      rgba(18,68,46,0.7) 70%,
+      rgba(18,68,46,0.97) 100%
+    );
+  }
+  .top-bar {
+    position: absolute;
+    top: 48px;
+    left: 52px;
+    right: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .tag {
+    background: rgba(218,165,33,0.15);
+    border: 1px solid rgba(218,165,33,0.4);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #DAA521;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 52px;
+  }
+  .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 14px;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 62px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.08;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  h2 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .divider {
+    width: 48px;
+    height: 1.5px;
+    background: rgba(218,165,33,0.6);
+    margin-bottom: 18px;
+  }
+  .caption {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    max-width: 500px;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-img"></div>
+  <div class="overlay"></div>
+  <div class="top-bar">
+    <span class="logo">ELIDE</span>
+    <span class="tag">The Experience</span>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Tuscany · Vineyard lunch</div>
+    <h2>Lunch with<br>no rush.<br>No <em>table timer.</em></h2>
+    <div class="divider"></div>
+    <p class="caption">We book restaurants that welcome families who want to linger. Three hours over pasta and wine in a Tuscan farmhouse is not an itinerary item — it's the whole point.</p>
+  </div>
+</div>
+</body>
+</html>

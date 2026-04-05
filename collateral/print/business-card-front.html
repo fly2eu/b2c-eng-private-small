@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Elide — Business Card (Front)</title>
+<style>
+  /* Standard business card: 85mm × 54mm at 96dpi → 323×205px
+     For print-ready at 300dpi: 1004×638px — we use 1004×638 */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1004px; height: 638px; background: white; }
+  .card {
+    width: 1004px;
+    height: 638px;
+    background: #12442E;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 72px;
+  }
+  /* Corner accent */
+  .corner-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(218,165,33,0.06);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  .corner-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(218,165,33,0.04);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
+  /* Top: Logo */
+  .top {
+    position: relative;
+    z-index: 1;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    letter-spacing: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .tagline {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    font-weight: 400;
+  }
+  /* Middle: Name & title */
+  .middle {
+    position: relative;
+    z-index: 1;
+  }
+  .name {
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  .title {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+  /* Bottom: Contact */
+  .bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .contact-item {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .contact-item .label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-right: 2px;
+  }
+  .gold-dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #DAA521;
+    flex-shrink: 0;
+  }
+  /* Gold accent line */
+  .gold-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #DAA521, #E8C04A, #DAA521);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="gold-line"></div>
+
+  <div class="top">
+    <span class="logo">ELIDE</span>
+    <span class="tagline">Private European Tours</span>
+  </div>
+
+  <div class="middle">
+    <div class="name">Arjun Mehta</div>
+    <div class="title">Travel Consultant</div>
+  </div>
+
+  <div class="bottom">
+    <div>
+      <div class="contact-item">
+        <span class="gold-dot"></span>
+        <span class="label">WA</span> +971 50 000 0000
+      </div>
+      <div class="contact-item">
+        <span class="gold-dot"></span>
+        <span class="label">E</span> hello@elide.com
+      </div>
+      <div class="contact-item">
+        <span class="gold-dot"></span>
+        elide.com
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

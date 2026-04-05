@@ -1,36 +1,193 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elide — Private European Tours
 
-## Getting Started
+> **"Your Europe. Your pace. Your family."**
 
-First, run the development server:
+A B2C consumer website for Elide, a premium private chauffeured tours brand serving Indian and GCC-based travelers across Switzerland, France, Italy, and Austria & Germany.
+
+---
+
+## The Brand
+
+| | |
+|---|---|
+| **Name** | Elide |
+| **Primary tagline** | Your Europe. Your pace. Your family. |
+| **Primary color** | Deep Emerald `#12442E` |
+| **Accent color** | Warm Gold `#DAA521` |
+| **Background** | Warm Ivory `#FAF7F0` |
+| **Heading font** | Robout (custom, loaded from `public/fonts/`) |
+| **Body font** | Poppins (Google Fonts) |
+| **WhatsApp** | `#25D366` (standard) |
+
+Full brand guide: [`brand-kit/brand-guide.md`](brand-kit/brand-guide.md)
+
+---
+
+## Tech Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 15+ (App Router) |
+| Styling | Tailwind CSS v4 |
+| Components | shadcn/ui + Radix UI |
+| Animations | Framer Motion |
+| Language | TypeScript |
+| Icons | lucide-react |
+
+---
+
+## Running Locally
 
 ```bash
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# → http://localhost:3000
+
+# Production build
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Environment variables** (create `.env.local`):
+```
+UNSPLASH_ACCESS_KEY=your_key_here   # optional — fallback images work without it
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/                      # Next.js App Router pages
+│   ├── page.tsx              # Homepage
+│   ├── destinations/         # All destinations + [slug] detail
+│   ├── tours/                # All tours + [slug] detail (day accordion)
+│   ├── about/                # About + trust page
+│   ├── contact/              # Contact form + WhatsApp (server + client split)
+│   ├── gallery/              # Photo gallery
+│   ├── globals.css           # Tailwind v4 theme + @font-face (Robout) + component classes
+│   ├── layout.tsx            # Root layout: Navbar + Footer + WhatsApp float
+│   └── sitemap.ts            # Auto-generated sitemap.xml
+├── components/
+│   ├── layout/               # Navbar, Footer
+│   ├── shared/               # Logo (PNG), Button, WhatsAppButton
+│   ├── animations/           # ScrollReveal, StaggerChildren, CountUp, Parallax
+│   └── ui/                   # TourCard, DestinationCard, PriceTag, TestimonialCard
+├── data/
+│   ├── tours.ts              # Filters itineraries-source.ts to 'private' segment
+│   ├── itineraries-source.ts # All raw itinerary data
+│   └── destinations.ts       # 4 destination entries with Unsplash images
+└── lib/
+    ├── utils.ts              # General utilities (cn, formatPrice)
+    └── whatsapp.ts           # Server-safe WhatsApp URL generator (no 'use client')
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Important architectural notes:**
+- `src/lib/whatsapp.ts` has no `'use client'` — allows server components to generate WhatsApp URLs
+- `contact/page.tsx` (server, exports metadata) + `contact/ContactClient.tsx` ('use client') — standard App Router pattern
+- Logos loaded as PNG via `next/image` from `public/logos/`
+- Custom font Robout loaded via `@font-face` in `globals.css` from `public/fonts/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pages (20 static routes)
 
-## Deploy on Vercel
+| Route | Page |
+|---|---|
+| `/` | Homepage |
+| `/destinations` | All destinations |
+| `/destinations/switzerland` | Switzerland detail |
+| `/destinations/france` | France detail |
+| `/destinations/italy` | Italy detail |
+| `/destinations/austria-germany` | Austria & Germany detail |
+| `/tours` | All tours listing |
+| `/tours/[slug]` | Tour detail with day-by-day accordion |
+| `/about` | About + trust page |
+| `/contact` | Contact + WhatsApp + enquiry form |
+| `/gallery` | Photo gallery |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Collateral
+
+All marketing collateral is in [`collateral/`](collateral/):
+
+### Instagram Grid (1080×1080px)
+
+| File | Post |
+|---|---|
+| `instagram/post-01-switzerland-hero.html` | Switzerland landscape |
+| `instagram/post-02-vehicle-detail.html` | Fleet — Mercedes V-Class |
+| `instagram/post-03-experiential-viewpoint.html` | The Moment — Alps viewpoint |
+| `instagram/post-04-text-quote.html` | Quote card — "No strangers on the bus" |
+| `instagram/post-05-france-landscape.html` | France destination |
+| `instagram/post-06-behind-scenes.html` | Route planning BTS |
+| `instagram/post-07-italy-landscape.html` | Italy — Rome/Florence/Tuscany |
+| `instagram/post-08-tagline-cta.html` | Brand tagline — green background |
+| `instagram/post-09-experiential-dining.html` | Tuscan vineyard lunch |
+| `instagram/post-10-vehicle-interior.html` | Mercedes interior detail |
+| `instagram/post-11-austria-landscape.html` | Austria — Vienna/Salzburg |
+| `instagram/post-12-whatsapp-cta.html` | WhatsApp CTA card |
+
+### Instagram Stories (1080×1920px)
+
+| File | Format |
+|---|---|
+| `stories/story-01-tour-spotlight.html` | Tour card — Switzerland Wonderland |
+| `stories/story-02-testimonial.html` | Guest quote — Priya, Dubai |
+| `stories/story-03-behind-scenes.html` | BTS — route reconnaissance |
+| `stories/story-04-poll.html` | Poll — "Which Europe first?" |
+
+### WhatsApp Programme Cards (1080×1920px)
+
+| File | Programme |
+|---|---|
+| `whatsapp-cards/card-switzerland-wonderland.html` | Switzerland Wonderland · 9 days · EUR 2,490 |
+| `whatsapp-cards/card-my-scenic-switzerland.html` | My Scenic Switzerland · 6 days · EUR 1,590 |
+
+### Print (A4 / Business Card)
+
+| File | Format |
+|---|---|
+| `print/business-card-front.html` | Business card front (1004×638px / 85×54mm) |
+| `print/business-card-back.html` | Business card back — tagline + WhatsApp QR |
+| `print/letterhead-a4.html` | Branded letterhead (794×1123px / A4) |
+| `print/one-pager-switzerland-wonderland.html` | Switzerland Wonderland one-pager (A4) |
+| `print/one-pager-my-scenic-switzerland.html` | My Scenic Switzerland one-pager (A4) |
+
+To render HTML collateral to PDF:
+```bash
+# Chrome headless (recommended)
+google-chrome --headless --print-to-pdf=output.pdf --no-margins path/to/file.html
+
+# Or Puppeteer / Playwright for pixel-perfect output
+```
+
+---
+
+## Deployment
+
+```bash
+# Vercel (recommended)
+vercel deploy
+```
+
+Set `NEXT_PUBLIC_SITE_URL=https://elide.com` in production environment variables.
+
+---
+
+## Brand Notes
+
+- **Never** use the flyEurope name on this site — the B2C brand and B2B backend are separate
+- **Never** use the word "luxury" as a label — show quality through detail
+- **WhatsApp** is the primary conversion CTA — it appears as a floating button on every page
+- **Mobile-first** — 70%+ of the target audience browses on mobile
+- Logos are PNG files in `public/logos/` — swap in SVG when available from the logo-exploration branch
+
+---
+
+*Brand created: April 2026*

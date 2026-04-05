@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 10: Vehicle Interior Detail</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    background: #0F0F0A;
+    overflow: hidden;
+  }
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=90&auto=format');
+    background-size: cover;
+    background-position: center;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      rgba(15,15,10,0.0) 0%,
+      rgba(15,15,10,0.0) 30%,
+      rgba(18,68,46,0.85) 65%,
+      rgba(18,68,46,0.98) 100%
+    );
+  }
+  .top-bar {
+    position: absolute;
+    top: 48px;
+    left: 52px;
+    right: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+  }
+  .mercedes-badge {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+  }
+  .content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 52px 52px 60px 40px;
+  }
+  .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DAA521;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+  }
+  h2 em {
+    font-style: italic;
+    color: #E8C04A;
+  }
+  .amenities {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+  .amenities li {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .amenity-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #DAA521;
+    flex-shrink: 0;
+  }
+  .fleet-note {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bg-img"></div>
+  <div class="overlay"></div>
+  <div class="top-bar">
+    <span class="logo">ELIDE</span>
+    <span class="mercedes-badge">Mercedes V-Class</span>
+  </div>
+  <div class="content">
+    <div class="eyebrow">The fleet</div>
+    <h2>Travel in<br><em>comfort.</em><br>Arrive relaxed.</h2>
+    <ul class="amenities">
+      <li><span class="amenity-dot"></span>Seats up to 7 passengers</li>
+      <li><span class="amenity-dot"></span>In-car WiFi on every journey</li>
+      <li><span class="amenity-dot"></span>Leather captain's chairs</li>
+      <li><span class="amenity-dot"></span>USB charging throughout</li>
+      <li><span class="amenity-dot"></span>Chilled water, every day</li>
+    </ul>
+    <div class="fleet-note">Standard across all Elide programmes</div>
+  </div>
+</div>
+</body>
+</html>

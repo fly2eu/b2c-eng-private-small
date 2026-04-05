@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Elide Instagram — Post 04: Quote Card</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    background: #FAF7F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    position: relative;
+  }
+  .top-rule {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #12442E, #DAA521, #12442E);
+  }
+  .bottom-rule {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #12442E, #DAA521, #12442E);
+  }
+  .ornament {
+    font-family: 'Georgia', serif;
+    font-size: 140px;
+    line-height: 0.8;
+    color: rgba(218,165,33,0.12);
+    margin-bottom: -30px;
+    align-self: flex-start;
+    margin-left: -20px;
+  }
+  blockquote {
+    font-family: 'Georgia', serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #1A1A14;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 48px;
+    letter-spacing: -0.5px;
+  }
+  blockquote em {
+    font-style: normal;
+    color: #12442E;
+    position: relative;
+  }
+  .divider {
+    width: 60px;
+    height: 1.5px;
+    background: #DAA521;
+    margin: 0 auto 32px;
+  }
+  .attr {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8A8A7A;
+    text-align: center;
+  }
+  .logo {
+    position: absolute;
+    bottom: 52px;
+    right: 64px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #12442E;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="top-rule"></div>
+  <div class="bottom-rule"></div>
+  <div class="ornament">"</div>
+  <blockquote>
+    No strangers on the bus.<br>
+    No compromises.<br>
+    Just <em>your family</em> and Europe.
+  </blockquote>
+  <div class="divider"></div>
+  <p class="attr">Private chauffeured European tours</p>
+  <div class="logo">ELIDE</div>
+</div>
+</body>
+</html>
