@@ -55,7 +55,7 @@
 - Use warm gold as the accent color (not silver, not blue)
 - Hero text should feel welcoming, not commanding
 - Trust signals tied to experience, not just statistics
-- Family imagery is essential — Taj always shows families celebrating milestones
+- Diverse audience imagery is essential — families, couples, groups, corporates — Taj always shows families celebrating milestones
 
 ---
 
@@ -89,7 +89,7 @@ From Belmond: whitespace = luxury. From Kensington: warm neutrals + strong hiera
 - Cards with generous padding and subtle hover lift
 - WhatsApp button always visible (bottom-right, fixed)
 - Price "from EUR X" shown on every tour card
-- Trust signals (Mercedes fleet, 4-star hotels, 24/7 support) near every CTA
+- Trust signals (premium fleet, handpicked hotels, 24/7 support) near every CTA
 
 ### Photography Direction
 - Warm, golden-hour tones (like Belmond)

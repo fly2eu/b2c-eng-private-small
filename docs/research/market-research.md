@@ -145,7 +145,7 @@ These serve a similar audience but position differently.
 - **Size**: 6-12 people
 - **Budget**: Often higher per-person than families
 - **Decision-maker**: One organizer, group consensus via WhatsApp
-- **What they want**: Unique, shareable experiences; wine tours, scenic routes, photography moments
+- **What they want**: Unique, shareable experiences; scenic routes, cultural experiences, photography moments
 
 ---
 
@@ -232,7 +232,7 @@ Based on analysis of successful luxury brands targeting this audience:
 - Our prices (from itinerary data): EUR 1,590 - EUR 2,490 per person
 - This is competitive for private touring — significantly cheaper than Western luxury operators
 - Position as "premium private touring at honest prices" — not luxury, not budget
-- Show EUR prices (per user request) with a note: "Prices in EUR. Final quote in your preferred currency."
+- Show EUR prices (per user request) with a note: "From EUR X per person — indicative. Your personalised quote follows consultation."
 
 ---
 

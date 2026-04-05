@@ -1,6 +1,6 @@
 # Elide — Private European Tours
 
-> **"Your Europe. Your pace. Your family."**
+> **"Your Europe. Your way."**
 
 A B2C consumer website for Elide, a premium private chauffeured tours brand serving Indian and GCC-based travelers across Switzerland, France, Italy, and Austria & Germany.
 
@@ -11,7 +11,7 @@ A B2C consumer website for Elide, a premium private chauffeured tours brand serv
 | | |
 |---|---|
 | **Name** | Elide |
-| **Primary tagline** | Your Europe. Your pace. Your family. |
+| **Primary tagline** | Your Europe. Your way. |
 | **Primary color** | Deep Emerald `#12442E` |
 | **Accent color** | Warm Gold `#DAA521` |
 | **Background** | Warm Ivory `#FAF7F0` |

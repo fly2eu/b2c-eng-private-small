@@ -39,8 +39,8 @@
 Three options — all meet the criteria (short, specific, can't be used by another travel company):
 
 ### Option A (Selected for Primary Use)
-**"Your Europe. Your pace. Your family."**
-- Direct, personal, answers the exact fear of the Indian family traveler (no group buses, no strangers)
+**"Your Europe. Your way."**
+- Direct, personal, speaks to every traveler — families, couples, groups — who want Europe on their own terms (no group buses, no strangers)
 - Works as homepage subhead, social bio, and print tagline
 - 8 words but reads as 3 short beats
 
@@ -56,7 +56,7 @@ Three options — all meet the criteria (short, specific, can't be used by anoth
 - Works well as a print/Instagram headline
 - 6 words
 
-**Primary tagline: "Your Europe. Your pace. Your family."**
+**Primary tagline: "Your Europe. Your way."**
 
 ---
 
@@ -173,7 +173,7 @@ Warm · Knowledgeable · Reassuring · Specific · Personal
 - ✅ family, your trip, your driver, your itinerary
 
 **5. Show it, don't label it**
-- ✅ "A Mercedes V-Class waits at arrivals, WiFi already on."
+- ✅ "Your vehicle waits at arrivals — WiFi already on. The driver knows your name."
 - ❌ "Luxury vehicle transfer included."
 
 ### Banned Words and Phrases
@@ -220,10 +220,10 @@ STRONG: Start on WhatsApp → We respond within 2 hours
 | Context | Tone | Example |
 |---------|------|---------|
 | Hero headline | Aspirational, warm | "Switzerland for your family, the way you imagined it." |
-| Tour description | Specific, cinematic | "Seventy-two waterfalls. Sheer cliff walls. The Lauterbrunnen Valley is the landscape that makes Swiss cheese adverts make sense." |
+| Tour description | Specific, cinematic | "Seventy-two waterfalls. Sheer cliff walls. The Lauterbrunnen Valley is the landscape that makes Alpine postcards make sense." |
 | Trust signals | Confident, matter-of-fact | "We've driven every route we recommend. Not a single one is on the itinerary because it looked good on paper." |
 | WhatsApp CTA | Warm, direct | "Tell us who's traveling. We'll take it from there." |
-| Price context | Transparent, reassuring | "From EUR 1,590 per person. Final quote in INR or AED — just ask." |
+| Price context | Transparent, reassuring | "From EUR 1,590 per person (indicative). Tailored to your group — your personalised quote follows consultation." |
 | Error/apology | Human, direct | "Something went wrong on our end. WhatsApp us directly — faster than a form." |
 
 ---
@@ -247,8 +247,8 @@ See `brand-kit/logos/` for SVG files.
 ## Social Media Presence
 
 ### Instagram Bio
-**Elide** · Private European tours for Indian & GCC families.
-Your Europe. Your pace. Your family. 🇨🇭🇫🇷🇮🇹
+**Elide** · Private European tours for Indian & GCC travelers.
+Your Europe. Your way. 🇨🇭🇫🇷🇮🇹
 → WhatsApp to plan your trip ↓
 
 ### WhatsApp Profile
@@ -256,15 +256,15 @@ Name: **Elide**
 About: Private chauffeured tours of Europe. WhatsApp us to start planning.
 
 ### Brand Hashtags
-`#Elide` `#PrivateEuropeTour` `#SwitzerlandWithFamily` `#EuropeByMercedes` `#IndiaToEurope`
+`#Elide` `#PrivateEuropeTour` `#SwitzerlandWithFamily` `#EuropeByElide` `#IndiaToEurope`
 
 ---
 
 ## Key Brand Differentiators (Use in Copy)
 
 1. **Private, always** — "Your vehicle. Your family. No strangers on the bus."
-2. **Mercedes fleet** — Not just "a car" — a specific, recognizable vehicle
-3. **4-star boutique hotels** — Handpicked, not chain hotels
+2. **Premium fleet** — private vehicles matched to your group size. V-Class, Sprinter, premium sedans and more.
+3. **handpicked hotels and premium stays** — Handpicked, not chain hotels
 4. **We've driven every route** — Real on-ground knowledge, not AI itineraries
 5. **Based in Europe** — On-ground support, not an overseas call centre
 6. **24/7 on-trip support** — Real humans who know Europe

@@ -9,7 +9,7 @@
 
 ## Project Overview
 
-**What:** A B2C consumer-facing website for a premium travel brand selling private chauffeured European tours to Indian and GCC-based travelers. 1–19 guests, 4-star boutique hotels, Mercedes fleet, fully managed door-to-door experiences.
+**What:** A B2C consumer-facing website for a premium travel brand selling private chauffeured European tours to Indian and GCC-based travelers. 1–19 guests, handpicked hotels and premium stays, premium fleet, fully managed door-to-door experiences.
 
 **Who sees this site:** End consumers — families, couples, friend groups planning a European holiday. NOT travel agents, NOT B2B. Every word should speak directly to the traveler.
 
@@ -32,7 +32,7 @@ The B2B website (flyEurope) uses:
 **This B2C brand must be COMPLETELY different:**
 - Different color family (no navy, no orange — see palette direction below)
 - Different font pairing (no Playfair, no DM Sans)
-- Different tone (warm, personal, family-focused)
+- Different tone (warm, personal, audience-inclusive — families, couples, groups, corporates)
 - Different layout approach (editorial, photography-led, emotional)
 
 If at any point the B2C site could be mistaken for flyEurope, something has gone wrong.
@@ -232,7 +232,7 @@ EXAMPLE:
 "Your family's first morning in Switzerland."
 "A private Mercedes meets you at Geneva Airport. By lunch, you're watching the Alps from your hotel terrace."
 [Describe the feel, the pace, the freedom]
-"Tell us about your family — we'll design your trip."
+"Tell us about your group — we'll design your trip."
 ```
 
 **Taglines:** Generate 3 options. Criteria:
@@ -252,7 +252,7 @@ Save everything to `brand-kit/brand-guide.md` and logo SVGs to `brand-kit/logos/
 **The Vibe:**
 Premium but warm. Aspirational but approachable. NOT cold Western minimalism. NOT loud maximalism.
 
-Think: **a boutique 4-star hotel lobby in Europe as experienced by a well-traveled Indian family** — warm materials, curated details, unhurried elegance, a sense of arrival. The website should feel like the trip itself: considered, comfortable, and quietly impressive.
+Think: **a boutique hotel lobby in Europe as experienced by a well-traveled Indian family** — warm materials, curated details, unhurried elegance, a sense of arrival. The website should feel like the trip itself: considered, comfortable, and quietly impressive.
 
 **Design Benchmarks (study these for patterns, not to copy):**
 - aman.com — ultra-premium, warm minimalism, space
@@ -267,7 +267,7 @@ Think: **a boutique 4-star hotel lobby in Europe as experienced by a well-travel
 - Trust signals near every CTA
 - WhatsApp button always prominent
 - Price transparency at the programme level
-- Family-oriented imagery (not just couples)
+- Diverse audience imagery — families, couples, groups, corporates
 
 **What NOT to Do:**
 - No cold corporate aesthetic
@@ -275,14 +275,14 @@ Think: **a boutique 4-star hotel lobby in Europe as experienced by a well-travel
 - No text-heavy pages without visual breaks
 - No small, dense grids on mobile
 - No "Contact Us" as the only CTA
-- No prices in EUR only without explanation
+- Prices always shown as indicative starting points — never fixed
 - No "luxury" as a word label
 
 ### Image Strategy
 - **Destination photos:** Golden hour, warm tones, human scale
 - **Vehicle photos:** Show interior comfort — backseat, legroom, amenities
 - **People photos:** Diverse groups reflecting the audience — Indian families, mixed groups
-- **Experience photos:** Local dining, vineyard visits, market walks
+- **Experience photos:** Local dining, food markets, cultural experiences, market walks
 - Use Unsplash API for destination photography (set UNSPLASH_ACCESS_KEY in .env.local)
 - Vehicle images: reuse from `reference-images/` folder
 - All images via Next.js `<Image>` — never `<img>`
@@ -390,7 +390,7 @@ src/
 - Team-focused (not named founder)
 - "Built by people who've driven every route" angle
 - Our approach: research-driven, detail-obsessed
-- On-the-ground in Europe
+- Founded by Europeans-by-experience — people who came for studies, stayed for the roads
 - 24/7 support story
 - NO fake team photos — use illustrations or abstract design
 

@@ -21,8 +21,8 @@ Private chauffeured European tours for 1–19 guests. Your own vehicle, your own
 4. **We're always there** — 24/7 support throughout your trip. Real humans who know Europe, not a call centre.
 
 ### What's Included (Typical Programme)
-- Private chauffeured vehicle throughout (Mercedes fleet)
-- 4-star boutique hotel accommodation
+- Private chauffeured vehicle throughout — premium vehicles matched to your group size
+- handpicked hotel accommodation — boutique properties, premium resorts, and distinguished stays
 - Daily breakfast
 - Airport arrival & departure transfers
 - English-speaking driver with deep local knowledge
@@ -87,17 +87,17 @@ Switzerland is our strongest destination, with 5 ready-to-go programmes covering
 **My Scenic Switzerland** — 6 days
 Geneva → Interlaken → Lucerne → Zürich
 Your Swiss introduction — Jungfrau region, Chapel Bridge, Rhine Falls, chocolate-box villages.
-From EUR 1,590 per person.
+From From EUR 1,590 per person (indicative).
 
 **Switzerland Wonderland** — 9 days
 The definitive grand tour — Glacier Express corridor, Matterhorn, St. Moritz, Montreux.
-From EUR 2,490 per person.
+From From EUR 2,490 per person (indicative).
 
 **Sweet Tour Switzerland** — 7 days
-Chocolate and cheese country — Gruyères, Lavaux vineyards, Bern, Emmental.
+Chocolate and cheese country — Gruyères, Lavaux UNESCO terraced hillsides, Bern, Emmental.
 
-**Swiss Cheese & Wine Discovery** — 8 days
-For food lovers — Valais wines, Gruyère, Emmental, Appenzell.
+**Swiss Cheese & Culinary Discovery** — 8 days
+For food lovers — Gruyère, Emmental, local markets, Appenzell dairy culture.
 
 **Swiss Alps Express Circuit** — 5 days
 The compact Swiss experience for those with less time.
@@ -139,7 +139,7 @@ Three generations, one journey. We match vehicles to your group — accessible f
 ## Pricing Philosophy
 
 - All prices are per person, based on twin sharing
-- Prices are in EUR (final quote provided in your preferred currency)
+- All prices are in EUR. All prices shown are indicative starting points — your personalised quote follows consultation.
 - Prices include accommodation, vehicle, and transfers
 - Prices exclude flights, insurance, meals (except breakfast), and entrance fees
 - No hidden fees — what we quote is what you pay
@@ -159,18 +159,18 @@ Three generations, one journey. We match vehicles to your group — accessible f
 Use these in copy (all are TRUE):
 - ✅ 24/7 on-ground support from people who know Europe
 - ✅ Every itinerary built from real road knowledge, not AI-generated
-- ✅ Mercedes fleet — maintained, insured, and driven by professionals
-- ✅ 4-star boutique hotels, handpicked for comfort and location
-- ✅ Based in Europe — we're on the ground, not routing from overseas
+- ✅ Premium fleet — maintained, insured, and driven by professionals. Vehicles include V-Class, premium sedans, and VIP Sprinters matched to your group size.
+- ✅ handpicked hotels — boutique properties, premium resorts, and distinguished stays
+- ✅ Founded by Europeans-by-experience — came for studies, stayed for the roads. On the ground, not routing from overseas.
 - ✅ Every route we recommend, we've driven ourselves
 - ✅ Small, expert team — your trip gets personal attention
 
 Do NOT claim:
 - ❌ "200+ itineraries" — we have ~10 ready-to-go programmes
 - ❌ "30+ countries" — we currently cover ~7 countries well
-- ❌ "Thousands of happy families" — we're early stage
+- ❌ "Thousands of happy families" — we have served 10+ private clients with 100% satisfaction
 - ❌ Awards or certifications — none yet
-- ❌ Named testimonials — not yet collected for B2C
+- ❌ Named testimonials — growing — 10+ happy clients, every one has referred us to someone they know
 
 What you CAN do:
 - Use hypothetical testimonial format: "Imagine arriving in Switzerland and..." (experiential, not fake reviews)
