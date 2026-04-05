@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="420" height="80" role="img" aria-label="Eloria — Private European Tours">
+
+  <!-- Icon Mark: Elegant winding road through European arches -->
+  <!-- Architectural arch (European arcade / bridge motif) -->
+  <!-- Main arch left -->
+  <path d="M12 62 L12 34 Q12 20 26 20 Q40 20 40 34 L40 62" stroke="#1B4D3E" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <!-- Small arch cutout inside (keystone arch feel) -->
+  <path d="M17 62 L17 36 Q17 26 26 26 Q35 26 35 36 L35 62" stroke="#C5963A" stroke-width="1.5" fill="none"/>
+  <!-- Gold keystone accent -->
+  <ellipse cx="26" cy="20" rx="5" ry="3" fill="#C5963A"/>
+  <!-- Road/path emerging from arch -->
+  <path d="M19 62 Q26 70 33 62" stroke="#C5963A" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-dasharray="2,2"/>
+  <!-- Flanking columns -->
+  <rect x="10" y="62" width="4" height="4" rx="1" fill="#1B4D3E"/>
+  <rect x="38" y="62" width="4" height="4" rx="1" fill="#1B4D3E"/>
+  <!-- Base ground line -->
+  <rect x="8" y="64" width="42" height="2" rx="1" fill="#1B4D3E" opacity="0.5"/>
+
+  <!-- Separator -->
+  <line x1="68" y1="18" x2="68" y2="62" stroke="#DDD8CC" stroke-width="1"/>
+
+  <!-- Wordmark: ELORIA -->
+  <text
+    x="82"
+    y="38"
+    font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif"
+    font-size="30"
+    font-weight="600"
+    letter-spacing="8"
+    fill="#1B4D3E"
+  >ELORIA</text>
+
+  <!-- Tagline -->
+  <text
+    x="83"
+    y="56"
+    font-family="'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-size="9.5"
+    font-weight="400"
+    letter-spacing="3.5"
+    fill="#8A8A7A"
+  >PRIVATE EUROPEAN TOURS</text>
+</svg>

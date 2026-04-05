@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Valdoro icon">
+  <!-- Background circle — works as favicon/app icon container -->
+  <circle cx="32" cy="32" r="32" fill="#1B4D3E"/>
+
+  <!-- Mountain valley icon — scaled and centered for square format -->
+  <!-- Left mountain -->
+  <polygon points="6,52 20,16 34,52" fill="#FAF7F0" opacity="0.95"/>
+  <!-- Right mountain (slightly shorter, overlapping) -->
+  <polygon points="22,52 34,24 46,52" fill="#FAF7F0" opacity="0.7"/>
+  <!-- Gold peak on left mountain -->
+  <polygon points="20,16 17,23 23,23" fill="#C5963A"/>
+  <!-- Gold peak on right mountain -->
+  <polygon points="34,24 31,30 37,30" fill="#DDB96A"/>
+  <!-- Subtle valley path in gold -->
+  <path d="M20 52 Q27 46 34 52" stroke="#C5963A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Base ground line -->
+  <rect x="6" y="50" width="52" height="2.5" rx="1.25" fill="#FAF7F0" opacity="0.4"/>
+</svg>

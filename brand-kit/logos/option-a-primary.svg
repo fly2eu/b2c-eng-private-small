@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="420" height="80" role="img" aria-label="Valdoro — Private European Tours">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Icon Mark: Abstracted mountain valley — V shape from two mountain peaks -->
+  <!-- Left mountain (tall) -->
+  <polygon points="8,62 30,14 52,62" fill="#1B4D3E"/>
+  <!-- Right mountain (shorter) -->
+  <polygon points="34,62 52,24 70,62" fill="#2A6B57"/>
+  <!-- Valley floor / base line -->
+  <rect x="8" y="60" width="62" height="3" rx="1.5" fill="#1B4D3E"/>
+  <!-- Gold peak accent on left mountain -->
+  <polygon points="30,14 26,22 34,22" fill="#C5963A"/>
+  <!-- Gold peak accent on right mountain -->
+  <polygon points="52,24 48,31 56,31" fill="#DDB96A"/>
+  <!-- Subtle road/path winding through valley — thin golden line -->
+  <path d="M30 62 Q41 54 52 62" stroke="#C5963A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Wordmark: VALDORO -->
+  <text
+    x="90"
+    y="36"
+    font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif"
+    font-size="28"
+    font-weight="600"
+    letter-spacing="6"
+    fill="#1B4D3E"
+  >VALDORO</text>
+
+  <!-- Tagline -->
+  <text
+    x="91"
+    y="54"
+    font-family="'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-size="9.5"
+    font-weight="400"
+    letter-spacing="3.5"
+    fill="#8A8A7A"
+  >PRIVATE EUROPEAN TOURS</text>
+
+  <!-- Thin separator line between icon and wordmark -->
+  <line x1="83" y1="18" x2="83" y2="62" stroke="#DDD8CC" stroke-width="1"/>
+</svg>
