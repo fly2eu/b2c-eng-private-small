@@ -1,3 +1,6 @@
+/* ─── Google Fonts (must be first) ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /* ─── Robout Custom Font (Elide heading font) ─────────────────────────────── */
 @font-face {
   font-family: "Robout";
@@ -102,9 +105,6 @@
   --transition-base:        250ms ease;
   --transition-slow:        400ms ease;
 }
-
-/* ─── Google Fonts ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* ─── Base Styles ──────────────────────────────────────────────────────────── */
 @layer base {

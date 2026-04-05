@@ -1,9 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { MessageCircle } from 'lucide-react'
-
-const WHATSAPP_NUMBER = '+1XXXXXXXXXX' // Replace before launch
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 
 interface WhatsAppButtonProps {
   message?: string
@@ -11,11 +9,6 @@ interface WhatsAppButtonProps {
   className?: string
   variant?: 'float' | 'inline' | 'large'
   tourName?: string
-}
-
-export function getWhatsAppUrl(message?: string) {
-  const encoded = encodeURIComponent(message || "Hi, I'm interested in a private European tour. Can you help?")
-  return `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}?text=${encoded}`
 }
 
 export default function WhatsAppButton({

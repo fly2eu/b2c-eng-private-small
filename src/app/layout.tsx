@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer'
 import WhatsAppButton from '@/components/forms/WhatsAppButton'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://elide.com'),
   title: {
     default: 'Elide — Private European Tours for Indian & GCC Families',
     template: '%s | Elide Private European Tours',

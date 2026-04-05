@@ -1,7 +1,25 @@
 import Link from 'next/link'
 import Logo from '@/components/shared/Logo'
-import { getWhatsAppUrl } from '@/components/forms/WhatsAppButton'
-import { Mail, Instagram, Facebook } from 'lucide-react'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
+import { Mail } from 'lucide-react'
+
+function InstagramIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+    </svg>
+  )
+}
+
+function FacebookIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+  )
+}
 
 const tours = [
   { label: 'My Scenic Switzerland', href: '/tours/my-scenic-switzerland' },
@@ -77,7 +95,7 @@ export default function Footer() {
                 aria-label="Elide on Instagram"
                 className="text-white/40 hover:text-[#DAA521] transition-colors"
               >
-                <Instagram size={20} />
+                <InstagramIcon />
               </a>
               <a
                 href="https://facebook.com/elidetours"
@@ -86,7 +104,7 @@ export default function Footer() {
                 aria-label="Elide on Facebook"
                 className="text-white/40 hover:text-[#DAA521] transition-colors"
               >
-                <Facebook size={20} />
+                <FacebookIcon />
               </a>
               <a
                 href="mailto:hello@elide.com"
