@@ -77,26 +77,6 @@ const fleet = [
   },
 ]
 
-const testimonials = [
-  {
-    quote: 'Client testimonial coming soon.',
-    name: 'Guest from Mumbai',
-    trip: 'Switzerland Wonderland · 9 days',
-    rating: 5,
-  },
-  {
-    quote: 'Client testimonial coming soon.',
-    name: 'Guest from Dubai',
-    trip: 'My Scenic Switzerland · 6 days',
-    rating: 5,
-  },
-  {
-    quote: 'Client testimonial coming soon.',
-    name: 'Guest from Bangalore',
-    trip: 'Alpine Grand Tour · 5 days',
-    rating: 5,
-  },
-]
 
 export default function AboutPage() {
   return (
@@ -134,16 +114,16 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-[#4A4A3C] font-body leading-relaxed">
               <p>
-                Elide was founded by people who came to Europe for PhD and Masters programmes in France. They lived here — not as tourists, but as residents who learned the train schedules, the seasonal road closures, the restaurants that don't appear on any app.
+                We started this because we kept seeing the same thing: travelers who'd planned for months, finally in Europe — and spending half their trip in queues, station platforms, and tourist bus holding areas. The journey they'd imagined and the one they were having were completely different things.
               </p>
               <p>
-                Years of living and traveling across the continent built something that no AI can replicate: genuine, ground-level knowledge of what makes a European journey work. Which mountain pass opens first in spring. Which lakeside hotel has the room with the view. Where to have lunch on the way from Geneva to Interlaken.
+                We knew there was another way. We'd been living it. Our founders came to France for higher education — PhD and Masters programmes — and stayed for years as residents, not tourists. They learned the train schedules and the seasonal road closures. They found the restaurant the apps don't list and the mountain pass that opens two weeks before anyone expects it.
               </p>
               <p>
-                That research-driven, detail-obsessed approach — drawn from an academic background — is what we apply to every itinerary we design. Every programme we offer has been personally driven by our team before it's offered to a client.
+                That ground-level, research-driven knowledge — the kind that comes from genuinely living somewhere — is what every Elide itinerary is built on. Every programme has been personally driven by our team before it reaches a client.
               </p>
               <p>
-                We serve Indian and GCC travelers because we understand the specific needs, preferences, and expectations of this audience. We've been there. We've navigated Europe as outsiders who became insiders. That's the perspective we bring.
+                So we built something different. A private, fully-managed journey where the only thing left to do is be present.
               </p>
             </div>
           </ScrollReveal>
@@ -247,26 +227,19 @@ export default function AboutPage() {
             </h3>
           </div>
         </ScrollReveal>
-        <StaggerChildren className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {testimonials.map((t, i) => (
-            <StaggerItem key={i}>
-              <div className="bg-white rounded-xl p-6 border border-[#EDE8DE]">
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} size={16} className="text-[#DAA521] fill-[#DAA521]" />
-                  ))}
-                </div>
-                <p className="text-[#4A4A3C] font-body text-sm leading-relaxed mb-4 italic">
-                  "{t.quote}"
-                </p>
-                <div>
-                  <p className="font-body text-sm font-semibold text-[#1A1A14]">{t.name}</p>
-                  <p className="font-body text-xs text-[#8A8A7A]">{t.trip}</p>
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerChildren>
+        <ScrollReveal>
+          <div className="bg-[#F4EFE4] rounded-2xl p-8 md:p-10 text-center max-w-2xl mx-auto">
+            <div className="flex gap-1 justify-center mb-5">
+              {[1,2,3,4,5].map(i => (
+                <Star key={i} size={20} className="text-[#DAA521] fill-[#DAA521]" />
+              ))}
+            </div>
+            <p className="font-heading text-xl font-light text-[#4A4A3C] italic mb-5 leading-relaxed">
+              &ldquo;We&apos;re collecting guest testimonials as our journeys are completed — with permission, always verbatim. Early trips have all been 5-star. Real stories coming soon.&rdquo;
+            </p>
+            <p className="text-sm text-[#8A8A7A] font-body">— The Elide team</p>
+          </div>
+        </ScrollReveal>
       </SectionWrapper>
 
       {/* Fleet section */}
@@ -319,10 +292,10 @@ export default function AboutPage() {
         <div className="max-w-xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mb-4">
-              Ready to plan your trip with us?
+              Your journey starts with a conversation.
             </h2>
             <p className="text-[#4A4A3C] font-body mb-7">
-              Tell us who's traveling, when, and what you'd love to see. We'll take it from there.
+              Tell us who&apos;s coming and when. No commitment, no hard sell — just the beginning of something worth remembering.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <WhatsAppButton

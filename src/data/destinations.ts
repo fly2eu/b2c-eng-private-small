@@ -18,7 +18,7 @@ export const destinations: Destination[] = [
     name: 'Switzerland',
     tagline: 'Where every mountain road is a postcard.',
     description:
-      "Switzerland is our home ground. We've driven every pass, walked every lakefront, and found the hidden corners the group buses miss. From the Bernese Oberland to the Engadine, from chocolate-box Gruyères to the car-free streets of Zermatt — five programmes, one extraordinary country.",
+      "There are places that take your breath before you've said a word. Switzerland is one of them. We've driven every pass, walked every lakefront, and found the corners the group buses never reach — from the Bernese Oberland to the Engadine, from old-world Gruyères to the car-free streets of Zermatt.",
     heroImage:
       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85&auto=format',
     cardImage:
@@ -40,7 +40,7 @@ export const destinations: Destination[] = [
     name: 'France',
     tagline: 'Paris is a chapter. Provence is the whole book.',
     description:
-      "Beyond the Eiffel Tower, France unravels at a private pace — lavender fields in Provence, cultural routes through Burgundy, the golden light of the Côte d'Azur. Custom French itineraries built around your interests.",
+      "France doesn't rush. And on this trip, neither do you. Beyond the Eiffel Tower, a private journey through France moves at a different pace — through lavender-scented Provence, along the golden Riviera coast, into châteaux country where time genuinely seems to slow. Built around the France you've been imagining.",
     heroImage:
       'https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=1920&q=85&auto=format',
     cardImage:
@@ -62,7 +62,7 @@ export const destinations: Destination[] = [
     name: 'Italy',
     tagline: 'Every road leads somewhere beautiful.',
     description:
-      "Tuscany, Amalfi, Lake Como, the Dolomites — Italy is almost unfairly photogenic. Custom private itineraries let you slow down in a hilltop village, linger over a long lunch, and skip the queues at the famous sights.",
+      "Italy is generous. With its light. Its food. Its strangers who become friends over two hours at a shared table. Private touring lets you receive that generosity — slow down in a hilltop village, let lunch stretch into the afternoon, and arrive at the Amalfi with nothing left to organise.",
     heroImage:
       'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1920&q=85&auto=format',
     cardImage:
@@ -84,7 +84,7 @@ export const destinations: Destination[] = [
     name: 'Austria & Germany',
     tagline: 'Alpine passes, castle roads, and Bavarian lakes.',
     description:
-      "The Austrian Alps and Bavarian highlands share a landscape that feels almost theatrical — baroque churches, mirror-still lakes, and mountain roads that seem designed for a private Mercedes. Multi-day private tours combining the best of both countries.",
+      "Dramatic and intimate at once — that's the Austrian Alps and Bavarian highlands. Baroque churches appear around mountain bends. Lakes sit so still they look painted. The roads feel designed for exactly this: a private vehicle, time to stop, and people you want to share it with.",
     heroImage:
       'https://images.unsplash.com/photo-1599423423923-6b5cbe73c6df?w=1920&q=85&auto=format',
     cardImage:

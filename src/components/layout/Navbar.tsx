@@ -9,10 +9,10 @@ import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
-  { label: 'Tours', href: '/tours' },
-  { label: 'Destinations', href: '/destinations' },
-  { label: 'About', href: '/about' },
-  { label: 'Gallery', href: '/gallery' },
+  { label: 'Journeys', href: '/tours' },
+  { label: 'Where We Go', href: '/destinations' },
+  { label: 'Our Story', href: '/about' },
+  { label: 'Moments', href: '/gallery' },
 ]
 
 export default function Navbar() {
@@ -41,7 +41,15 @@ export default function Navbar() {
             scrolled ? 'py-3' : 'py-5'
           )}>
             {/* Logo */}
-            <Logo variant={scrolled ? 'dark' : 'light'} size={scrolled ? 'sm' : 'md'} />
+            <div className="flex flex-col">
+              <Logo variant={scrolled ? 'dark' : 'light'} size={scrolled ? 'sm' : 'md'} />
+              <span className={cn(
+                'text-[9px] font-body font-medium tracking-[0.18em] uppercase transition-colors duration-300',
+                scrolled ? 'text-[#8A8A7A]' : 'text-white/50'
+              )}>
+                Private European Journeys
+              </span>
+            </div>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">

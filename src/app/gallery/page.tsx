@@ -14,56 +14,56 @@ const galleryImages = [
     src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1000&q=80&auto=format',
     alt: 'Swiss Alps — Bernese Oberland',
     category: 'Destinations',
-    caption: 'Jungfrau region, Switzerland',
+    caption: 'The valley that made everyone go quiet',
     wide: true,
   },
   {
     src: 'https://images.unsplash.com/photo-1518730420292-e1deabe1f8c2?w=800&q=80&auto=format',
     alt: 'Interlaken, gateway to the Alps',
     category: 'Destinations',
-    caption: 'Interlaken, Switzerland',
+    caption: 'Your first morning in the Alps',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=800&q=80&auto=format',
     alt: 'Lake Lucerne, Central Switzerland',
     category: 'Destinations',
-    caption: 'Lake Lucerne, Switzerland',
+    caption: 'Time moves differently here',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=800&q=80&auto=format',
     alt: 'French countryside, Provence',
     category: 'Destinations',
-    caption: 'Provence, France',
+    caption: 'When the road slows down and you don\'t mind',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80&auto=format',
     alt: 'Venice canal, Northern Italy',
     category: 'Destinations',
-    caption: 'Venice, Italy',
+    caption: 'A city better experienced than explained',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1599423423923-6b5cbe73c6df?w=800&q=80&auto=format',
     alt: 'Austrian Alpine village',
     category: 'Destinations',
-    caption: 'Austrian Alps',
+    caption: 'The landscape that arrives without warning',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1596436165816-5df26fc13f4a?w=1000&q=80&auto=format',
     alt: 'Alpine lake, early morning',
     category: 'Destinations',
-    caption: 'Alpine lake, Switzerland',
+    caption: 'This is why the long drive was worth it',
     wide: true,
   },
   {
     src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80&auto=format',
     alt: 'Mountain lake in the Alps',
     category: 'Destinations',
-    caption: 'Mountain lake, Swiss Alps',
+    caption: 'Nobody was looking at their phone',
     wide: false,
   },
   // Experiences
@@ -71,35 +71,35 @@ const galleryImages = [
     src: 'https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=800&q=80&auto=format',
     alt: 'Group at European mountain viewpoint',
     category: 'Experiences',
-    caption: 'Viewpoints worth staying at',
+    caption: 'The viewpoint nobody wanted to leave',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80&auto=format',
     alt: 'Road trip through Europe',
     category: 'Experiences',
-    caption: 'Every road, personally driven',
+    caption: 'Roads we\'ve driven ourselves — before you do',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1515859005217-8a1f08870f59?w=800&q=80&auto=format',
     alt: 'Alpine mountain road',
     category: 'Experiences',
-    caption: 'Alpine passes, our speciality',
+    caption: 'The pass that opens in May and captivates all summer',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=800&q=80&auto=format',
     alt: 'Local food market in Europe',
     category: 'Experiences',
-    caption: 'Local markets and food culture',
+    caption: 'The market your driver said you shouldn\'t miss',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80&auto=format',
     alt: 'Friends traveling together in Europe',
     category: 'Experiences',
-    caption: 'Your group, your pace',
+    caption: 'No strangers. No schedule. Just yours.',
     wide: true,
   },
   // Stays
@@ -107,21 +107,21 @@ const galleryImages = [
     src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&auto=format',
     alt: 'Boutique hotel with mountain view',
     category: 'Stays',
-    caption: 'Handpicked hotels with views',
+    caption: 'Where you\'ll wake up tomorrow',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80&auto=format',
     alt: 'Premium hotel room in Europe',
     category: 'Stays',
-    caption: 'Distinguished properties throughout',
+    caption: 'The kind of hotel that feels like a discovery',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&q=80&auto=format',
     alt: 'Hotel terrace overlooking Europe',
     category: 'Stays',
-    caption: 'Waking up to views like this',
+    caption: 'Open the curtains. This was always the plan.',
     wide: false,
   },
   // Fleet
@@ -129,21 +129,21 @@ const galleryImages = [
     src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80&auto=format',
     alt: 'Premium vehicle interior — Elide fleet',
     category: 'Fleet',
-    caption: 'Premium interior, every journey',
+    caption: 'Your vehicle for the next nine days',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&q=80&auto=format',
     alt: 'Private vehicle for European touring',
     category: 'Fleet',
-    caption: 'Your private vehicle for the journey',
+    caption: 'Yours from arrival to farewell',
     wide: false,
   },
   {
     src: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80&auto=format',
     alt: 'VIP vehicle for private touring',
     category: 'Fleet',
-    caption: 'VIP touring — for milestone occasions',
+    caption: 'For the trip that marks something',
     wide: false,
   },
 ]
@@ -173,10 +173,10 @@ export default function GalleryPage() {
           <ScrollReveal>
             <span className="section-label text-[#E8C04A] mb-3 block">The experience</span>
             <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mb-4">
-              Europe through our lens
+              What it looks like when the<br className="hidden sm:block" /> logistics disappear.
             </h1>
             <p className="text-white/70 font-body text-lg max-w-xl leading-relaxed">
-              Mountain passes, lakeside villages, and the moments between. This is what a private European tour looks and feels like.
+              The valley that goes quiet. The lunch that became dinner. The view that nobody photographed — and everyone remembers.
             </p>
           </ScrollReveal>
         </div>

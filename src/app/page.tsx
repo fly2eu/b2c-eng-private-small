@@ -13,35 +13,35 @@ import { featuredTours } from '@/data/tours'
 import { featuredDestinations } from '@/data/destinations'
 
 export const metadata: Metadata = {
-  title: 'Elide — Private European Tours for Indian & GCC Travelers',
+  title: 'Elide — Private European Journeys',
   description:
-    'Private chauffeured European tours — your own vehicle, your own driver, your own pace. Switzerland, France, Italy and more. Built for Indian and GCC travelers. No strangers on the bus.',
+    'What happens when everything is handled and the only thing left is Europe — and each other. Private chauffeured journeys through Switzerland, France, Italy and beyond.',
 }
 
 const howItWorksSteps = [
   {
     number: '01',
     icon: Phone,
-    title: 'Tell us who\'s traveling',
-    body: 'Family, couple, group of friends — tell us who\'s coming, when, and what you\'d love to see. A 2-minute WhatsApp message is all it takes.',
+    title: 'A message is all it takes.',
+    body: 'Send us a WhatsApp with who\'s coming, when, and what you\'d love to see. Two minutes. No forms, no commitment.',
   },
   {
     number: '02',
     icon: MapPin,
-    title: 'We design your journey',
-    body: 'Day-by-day itinerary matched to your pace, interests, and group. Stays handpicked. Vehicle selected for your size. Every detail thought through.',
+    title: 'We build your journey.',
+    body: 'Day-by-day itinerary built around your pace and group. Every stay handpicked. Every route personally driven before it reaches you.',
   },
   {
     number: '03',
     icon: Car,
-    title: 'You arrive. We handle everything.',
-    body: 'Your chauffeur meets you at the airport with a name board. Stays confirmed. Itinerary in hand. You have zero logistics to manage.',
+    title: 'You arrive. We\'ve handled the rest.',
+    body: 'Your chauffeur meets you at arrivals with a name board. Hotels confirmed. Itinerary ready. You have exactly nothing to organise.',
   },
   {
     number: '04',
     icon: Star,
-    title: 'You live it.',
-    body: '24/7 on-trip support from people who know Europe. If anything changes — road, weather, reservation — we handle it. You just enjoy.',
+    title: 'You\'re just... there.',
+    body: 'On the mountain road. At the lakeside café. In the moment you came for. We\'re in the background if anything changes — you just enjoy.',
   },
 ]
 
@@ -52,63 +52,41 @@ const trustStats = [
   { value: 100, suffix: '%', label: 'Client satisfaction' },
 ]
 
-const differentWayItems = [
-  {
-    group: 'On a group tour',
-    group_detail: 'You get 20 minutes at the viewpoint.',
-    private_detail: 'With us, you stay until you\'re ready.',
-  },
-  {
-    group: 'On a group tour',
-    group_detail: '40 strangers decide your schedule.',
-    private_detail: 'With us, your day starts when you want.',
-  },
-  {
-    group: 'On a group tour',
-    group_detail: 'You fight for the window seat.',
-    private_detail: 'With us, the whole vehicle is yours.',
-  },
-  {
-    group: 'On a group tour',
-    group_detail: 'Parking in Florence takes 45 minutes.',
-    private_detail: 'With us, your driver knows exactly where to go.',
-  },
-]
 
 const travelStyles = [
   {
     icon: Sunrise,
     style: 'Slow & Experiential',
-    tagline: 'Three days in one valley. Watch the light change.',
-    detail: 'Linger over lunch. Take the long way. Discover towns most tourists rush past.',
-    for: 'For: couples, multigenerational groups, repeat visitors',
+    tagline: 'For the trip where you finally have that conversation.',
+    detail: 'Three days in one valley. The long lunches. The roads no one else takes. You come back different.',
+    for: 'Couples · multigenerational families · repeat visitors',
     color: 'bg-[#1D5C3F]/8 border-[#1D5C3F]/20',
     iconColor: 'text-[#12442E]',
   },
   {
     icon: Globe,
-    style: 'Grand Tour',
-    tagline: 'See more of Europe in less time.',
-    detail: 'Multiple countries, iconic highlights, efficient routing. Designed for first-timers with limited leave.',
-    for: 'For: first-timers, professionals, families seeing Europe for the first time',
+    style: 'The Grand Tour',
+    tagline: 'For the first time you see Europe — and want to see it all.',
+    detail: 'Multiple countries, iconic moments, efficient routing. Every landmark, without the logistics overhead.',
+    for: 'First-timers · professionals with limited leave · families doing Europe for the first time',
     color: 'bg-[#DAA521]/8 border-[#DAA521]/20',
     iconColor: 'text-[#B8891A]',
   },
   {
     icon: TreePine,
     style: 'Countryside & Nature',
-    tagline: 'Skip the crowds. Take the road between the mountains.',
-    detail: 'Alpine passes, national parks, rural valleys. Europe\'s best scenery with zero tourist crowds.',
-    for: 'For: nature lovers, hikers, photography enthusiasts, repeat visitors',
+    tagline: 'For the one who\'s been saying "I want the real Europe."',
+    detail: 'Alpine passes, national parks, rural valleys. The Europe that doesn\'t make the tourist brochure — but should.',
+    for: 'Nature lovers · hikers · photographers · anyone escaping city noise',
     color: 'bg-[#2D7A4F]/8 border-[#2D7A4F]/20',
     iconColor: 'text-[#2D7A4F]',
   },
   {
     icon: Building2,
     style: 'City Explorer',
-    tagline: 'Maximum cities, minimum hassle.',
-    detail: 'Museums, markets, architecture, food scenes. All the great European cities — without the transport stress.',
-    for: 'For: culture seekers, shoppers, art lovers, corporate groups',
+    tagline: 'For the group that runs on culture, coffee, and evening walks.',
+    detail: 'Museums, markets, architecture, food scenes. The great European cities — without the transport stress.',
+    for: 'Culture seekers · shoppers · art lovers · corporate groups',
     color: 'bg-[#12442E]/8 border-[#12442E]/20',
     iconColor: 'text-[#12442E]',
   },
@@ -180,34 +158,30 @@ export default function HomePage() {
         <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
           <div className="max-w-2xl">
             <ScrollReveal>
-              <span className="section-label text-[#E8C04A] mb-6 block tracking-[0.2em]">
-                Private European Tours
-              </span>
-              <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.0] mb-6 tracking-tight">
-                Your car.<br />
-                Your road.<br />
-                <span className="text-[#E8C04A]">Your Europe.</span>
+              <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.05] mb-5 tracking-tight">
+                Come back closer<br />
+                <span className="text-[#E8C04A]">than you left.</span>
               </h1>
-              <p className="text-lg sm:text-xl text-white/75 font-body leading-relaxed mb-10 max-w-xl">
-                A private vehicle, a dedicated driver, and an itinerary built around the way you want to travel — whether that&apos;s slow and immersive or fast and full of cities.
+              <p className="text-base sm:text-lg text-white/60 font-body leading-relaxed mb-10 max-w-xl">
+                Private chauffeured journeys through Europe — every detail handled, every day yours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#choose-your-style"
+                  href="#how-it-works"
                   className="btn-accent text-base py-4 px-8 justify-center font-semibold"
                 >
-                  Discover Your Style
+                  See How It Works
                 </a>
                 <a
-                  href={getWhatsAppUrl("Hi, I'm interested in a private European tour. Can you help me plan?")}
+                  href={getWhatsAppUrl("Hi, I'm interested in planning a private European journey. Can you help?")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 text-base py-4 px-8 rounded-md border border-white/40 bg-white/10 text-white font-semibold font-body transition-all duration-200 hover:bg-[#25D366] hover:border-[#25D366]"
+                  className="flex items-center justify-center gap-3 text-base py-4 px-8 rounded-md border border-white/30 bg-white/8 text-white font-semibold font-body transition-all duration-200 hover:bg-[#25D366] hover:border-[#25D366]"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
-                  Start on WhatsApp
+                  Start a Conversation
                 </a>
               </div>
             </ScrollReveal>
@@ -231,62 +205,59 @@ export default function HomePage() {
         </div>
       </SectionWrapper>
 
-      {/* ─── A Different Way to See Europe (NEW) ─── */}
+      {/* ─── A Different Way to See Europe ─── */}
       <SectionWrapper variant="warm" id="different-way">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <span className="section-label">Private touring explained</span>
-            <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2 mb-4">
-              A different way to see Europe.
-            </h2>
-            <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto text-lg">
-              Most people have only seen Europe on a group bus tour. Here's what changes when it's private.
-            </p>
-          </div>
-        </ScrollReveal>
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <span className="section-label">Private touring, explained</span>
+              <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2">
+                What changes when it&apos;s yours.
+              </h2>
+            </div>
+          </ScrollReveal>
 
-        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
-          {differentWayItems.map((item, i) => (
-            <StaggerItem key={i}>
-              <div className="bg-white rounded-2xl p-6 border border-[#EDE8DE] shadow-sm">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                  <div className="flex-1 p-4 bg-[#F4EFE4] rounded-xl">
-                    <p className="text-xs font-body font-medium text-[#8A8A7A] uppercase tracking-wide mb-1">Group tour</p>
-                    <p className="text-[#4A4A3C] font-body text-sm leading-relaxed">{item.group_detail}</p>
-                  </div>
-                  <div className="hidden sm:flex items-center text-[#DAA521] font-bold text-xl">→</div>
-                  <div className="flex-1 p-4 bg-[#12442E]/6 rounded-xl border border-[#12442E]/15">
-                    <p className="text-xs font-body font-medium text-[#12442E] uppercase tracking-wide mb-1">With Elide</p>
-                    <p className="text-[#1A1A14] font-body text-sm leading-relaxed font-medium">{item.private_detail}</p>
-                  </div>
+          <ScrollReveal>
+            <div className="bg-[#12442E] rounded-2xl p-8 md:p-12 mb-10">
+              <p className="font-heading text-xl md:text-2xl font-light text-white/85 leading-relaxed mb-5 italic">
+                &ldquo;Picture this: it&apos;s day three. You&apos;re driving through the Lauterbrunnen Valley — waterfalls on both sides, the valley opening ahead. Someone says &lsquo;can we stop here for a bit?&rsquo;&rdquo;
+              </p>
+              <p className="font-heading text-2xl md:text-3xl font-semibold text-[#E8C04A] mb-5">
+                You do.
+              </p>
+              <p className="text-white/70 font-body text-lg leading-relaxed">
+                No one checks their watch. There&apos;s no tour leader. There&apos;s no group. Just your people, this valley, and time that belongs entirely to you.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <StaggerChildren className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              { outcome: 'Every stop is your decision.', detail: 'Stay as long as the moment deserves. Leave when you\'re ready.' },
+              { outcome: 'Every day is designed for you.', detail: 'Your pace. Your interests. Your group — not forty strangers sharing a schedule.' },
+              { outcome: 'Every detail is already handled.', detail: 'Hotels confirmed. Itinerary ready. You just arrive and be present.' },
+            ].map((item, i) => (
+              <StaggerItem key={i}>
+                <div className="bg-white rounded-xl p-6 border border-[#EDE8DE] h-full">
+                  <p className="font-heading text-lg font-semibold text-[#1A1A14] mb-2">{item.outcome}</p>
+                  <p className="text-sm text-[#4A4A3C] font-body leading-relaxed">{item.detail}</p>
                 </div>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerChildren>
-
-        <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="font-heading text-2xl font-semibold text-[#12442E] mb-2">
-              This is private touring.
-            </p>
-            <p className="text-[#4A4A3C] font-body text-lg">
-              And once you experience it, you won't go back.
-            </p>
-          </div>
-        </ScrollReveal>
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
+        </div>
       </SectionWrapper>
 
-      {/* ─── Choose Your Style (NEW) ─── */}
+      {/* ─── Choose Your Style ─── */}
       <SectionWrapper variant="section" id="choose-your-style">
         <ScrollReveal>
           <div className="text-center mb-12">
             <span className="section-label">Find your fit</span>
             <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2 mb-4">
-              Choose your travel style.
+              How do you like to travel?
             </h2>
             <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto">
-              Every group is different. Tell us how you like to travel, and we'll design around your pace.
+              Every group is different. Tell us your pace and we&apos;ll design around it.
             </p>
           </div>
         </ScrollReveal>
@@ -310,10 +281,10 @@ export default function HomePage() {
         <ScrollReveal>
           <div className="text-center">
             <p className="text-[#4A4A3C] font-body mb-5 text-lg">
-              Not sure which style suits you?
+              Not sure yet? Tell us who&apos;s coming — we&apos;ll suggest the right fit.
             </p>
             <a
-              href={getWhatsAppUrl("Hi, I'd like to discuss which travel style would suit my group. Can you help?")}
+              href={getWhatsAppUrl("Hi, I'm not sure which travel style suits my group. Can you help us figure it out?")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp inline-flex"
@@ -321,7 +292,7 @@ export default function HomePage() {
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
-              Tell us about your group — we'll suggest the perfect pace
+              Let&apos;s talk about your trip
             </a>
           </div>
         </ScrollReveal>
@@ -331,12 +302,12 @@ export default function HomePage() {
       <SectionWrapper id="how-it-works" variant="warm">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <span className="section-label">The process</span>
+            <span className="section-label">From message to memory</span>
             <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2">
-              How your trip comes together
+              How your journey comes together
             </h2>
             <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto">
-              From your first WhatsApp message to the moment your driver meets you at arrivals — here's how we make it happen.
+              From your first message to the moment your chauffeur meets you at arrivals — here&apos;s what we take off your plate.
             </p>
           </div>
         </ScrollReveal>
@@ -491,24 +462,24 @@ export default function HomePage() {
       <SectionWrapper variant="section">
         <div className="max-w-2xl mx-auto text-center">
           <ScrollReveal>
-            <span className="section-label">Start planning</span>
+            <span className="section-label">Begin here</span>
             <h2 className="font-heading text-4xl font-semibold text-[#1A1A14] mt-2 mb-4">
-              Tell us about your group.<br />We'll design your journey.
+              The trip you keep talking about<br />starts with a message.
             </h2>
             <p className="text-[#4A4A3C] font-body leading-relaxed mb-3">
-              WhatsApp us with who's traveling and when. We respond within 2 hours during business hours. No obligation, no pressure — just a conversation about your trip.
+              Tell us who&apos;s coming and when. No forms, no commitment — just a conversation about the journey you&apos;ve been imagining. We respond within 2 hours.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
               <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Families</span>
               <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Couples</span>
               <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Friend groups</span>
-              <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Corporate retreats</span>
+              <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Corporate groups</span>
               <span className="text-xs bg-[#12442E]/8 text-[#12442E] font-body font-medium px-3 py-1 rounded-full">Milestone celebrations</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <WhatsAppButton
                 variant="large"
-                message="Hi, I'm planning a private European tour. Can we talk?"
+                message="Hi, I'm thinking about a private European journey. Can we talk?"
                 label="Start on WhatsApp"
               />
               <Link href="/contact" className="btn-outline text-base py-4 px-6 justify-center">

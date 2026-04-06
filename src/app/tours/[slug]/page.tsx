@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!tour) return {}
   return {
     title: `${tour.title} — ${tour.durationDays.min}-Day Private Tour`,
-    description: `${tour.description} From EUR ${tour.priceFromEur?.toLocaleString()} per person. Private vehicle, 4-star hotels, 24/7 support.`,
+    description: `${tour.description} From EUR ${tour.priceFromEur?.toLocaleString()} per person. Private vehicle, handpicked hotels, 24/7 on-trip support.`,
     openGraph: {
       title: `${tour.title} | Elide Private European Tours`,
       description: tour.description,
@@ -183,20 +183,29 @@ export default async function TourDetailPage({ params }: Props) {
             {/* Day-by-Day Accordion */}
             <ScrollReveal>
               <div>
-                <h2 className="font-heading text-2xl font-semibold text-[#1A1A14] mb-5">
+                <h2 className="font-heading text-2xl font-semibold text-[#1A1A14] mb-3">
                   Day by day
                 </h2>
+                <p className="text-sm text-[#4A4A3C] font-body mb-5 leading-relaxed bg-[#F4EFE4] rounded-xl px-5 py-4 border border-[#DDD8CC]">
+                  <strong className="text-[#12442E]">Every itinerary is a starting point.</strong>{' '}
+                  Days can be reordered, extended, or adjusted to suit your group&apos;s pace and interests. Tell us what matters most — we&apos;ll build around it.
+                </p>
                 <DayAccordion days={tour.days} />
               </div>
             </ScrollReveal>
 
             {/* Included / Not Included */}
             <ScrollReveal>
+              <div>
+                <p className="text-sm text-[#4A4A3C] font-body mb-4 leading-relaxed">
+                  Everything below is handled. You don&apos;t need to think about any of it.
+                </p>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="bg-[#F4EFE4] rounded-xl p-6">
                   <h3 className="font-heading text-lg font-semibold text-[#1A1A14] mb-4 flex items-center gap-2">
                     <CheckCircle size={18} className="text-[#2D7A4F]" />
-                    What's included
+                    What&apos;s included
                   </h3>
                   <ul className="space-y-2">
                     {tour.included.map((item, i) => (
@@ -277,7 +286,7 @@ export default async function TourDetailPage({ params }: Props) {
                       'Private vehicle — your group only',
                       'Every route personally driven by our team',
                       'Based in Europe — on-ground support',
-                      '4-star boutique hotels, handpicked',
+                      'Handpicked hotels — comfort and character',
                       '24/7 support throughout your trip',
                     ].map((t, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-[#4A4A3C] font-body">
@@ -326,10 +335,10 @@ export default async function TourDetailPage({ params }: Props) {
       <SectionWrapper variant="primary">
         <div className="text-center max-w-xl mx-auto">
           <h2 className="font-heading text-3xl font-semibold text-white mb-3">
-            Ready to book {tour.title}?
+            This journey is waiting for you.
           </h2>
           <p className="text-white/70 font-body mb-6">
-            WhatsApp us to check availability, customise the itinerary, or get a quote in your currency.
+            WhatsApp us to check availability, adjust the itinerary, or start from scratch. No commitment — just a conversation.
           </p>
           <WhatsAppButton variant="large" message={whatsappMsg} label="Start on WhatsApp" />
         </div>

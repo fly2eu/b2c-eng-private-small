@@ -47,10 +47,10 @@ export default function ContactClient() {
           <ScrollReveal>
             <span className="section-label text-[#E8C04A] mb-3 block">Get in touch</span>
             <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mb-4">
-              Let&apos;s plan your trip
+              Let&apos;s start with who&apos;s coming.
             </h1>
             <p className="text-white/70 font-body text-lg max-w-xl leading-relaxed">
-              Tell us about your family and when you&apos;re thinking of traveling. We&apos;ll design your journey from there.
+              No commitment. No hard sell. Just a conversation about the journey you&apos;ve been imagining — and whether we can make it happen.
             </p>
           </ScrollReveal>
         </div>

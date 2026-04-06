@@ -23,12 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const dest = getDestinationBySlug(slug)
   if (!dest) return {}
+  const metaDesc = `Private chauffeured journeys through ${dest.name} — every detail handled, every day yours. ${dest.tagline}`
   return {
-    title: `${dest.name} Private Tours`,
-    description: `${dest.description.slice(0, 155)}...`,
+    title: `${dest.name} Private Journeys — Elide`,
+    description: metaDesc.slice(0, 160),
     openGraph: {
-      title: `${dest.name} Private Tours | Elide`,
-      description: dest.description.slice(0, 155),
+      title: `${dest.name} | Elide Private European Journeys`,
+      description: metaDesc.slice(0, 160),
       images: [{ url: dest.heroImage }],
     },
   }
@@ -131,7 +132,7 @@ export default async function DestinationPage({ params }: Props) {
           <ScrollReveal>
             <span className="section-label mb-2 block">{dest.name} programmes</span>
             <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mb-8">
-              Ready-to-go tours in {dest.name}
+              Journeys through {dest.name}
             </h2>
           </ScrollReveal>
           <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
