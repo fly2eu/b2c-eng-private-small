@@ -282,11 +282,10 @@
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
   }
 
-  /* Cards */
+  /* Cards — no default border; photo cards need no border */
   .card {
     background: white;
     border-radius: var(--radius-card);
-    border: 1px solid var(--color-border-subtle);
     overflow: hidden;
     transition: transform var(--transition-base), box-shadow var(--transition-base);
     box-shadow: var(--shadow-card);
@@ -356,6 +355,14 @@
     border: none;
     border-top: 1px solid var(--color-border);
     margin-block: 1.5rem;
+  }
+
+  /* Section divider — gold decorative line above headings */
+  .section-divider {
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-accent);
+    margin-bottom: 1.5rem;
   }
 
   /* WhatsApp Float Button */
