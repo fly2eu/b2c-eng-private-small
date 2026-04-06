@@ -29,7 +29,6 @@ export default function DestinationsPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <span className="section-label text-[#E8C04A] mb-3 block">Where we go</span>
             <h1 className="font-heading text-5xl font-semibold text-white mb-4">
               Destinations
             </h1>
@@ -55,7 +54,7 @@ export default function DestinationsPage() {
       <SectionWrapper variant="section">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <ScrollReveal direction="left">
-            <span className="section-label mb-2 block">Coming soon</span>
+            <div className="section-divider" />
             <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mb-4">
               More destinations on request
             </h2>

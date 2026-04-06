@@ -45,7 +45,6 @@ export default function ContactClient() {
       <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 bg-[#12442E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <span className="section-label text-[#E8C04A] mb-3 block">Get in touch</span>
             <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mb-4">
               Let&apos;s start with who&apos;s coming.
             </h1>

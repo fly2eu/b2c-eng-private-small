@@ -171,7 +171,6 @@ export default function GalleryPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <span className="section-label text-[#E8C04A] mb-3 block">The experience</span>
             <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mb-4">
               What it looks like when the<br className="hidden sm:block" /> logistics disappear.
             </h1>

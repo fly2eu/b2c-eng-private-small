@@ -45,8 +45,7 @@ export default function ToursPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <span className="section-label text-[#E8C04A]">Our programmes</span>
-            <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mt-2 mb-4">
+            <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mb-4">
               Private European Tours
             </h1>
             <p className="text-white/70 font-body text-lg max-w-xl leading-relaxed mb-3">
@@ -63,8 +62,8 @@ export default function ToursPage() {
       <SectionWrapper variant="warm">
         <ScrollReveal>
           <div className="max-w-2xl mx-auto text-center mb-10">
-            <span className="section-label">Find your style</span>
-            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mt-2 mb-4">
+            <div className="section-divider mx-auto" />
+            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mb-4">
               How do you like to travel?
             </h2>
             <p className="text-[#4A4A3C] font-body">
