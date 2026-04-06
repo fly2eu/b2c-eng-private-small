@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, Users, MapPin, CheckCircle, XCircle, ChevronDown, ArrowLeft, Car } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import TourCard from '@/components/ui/TourCard'
 import ScrollReveal, { StaggerChildren, StaggerItem } from '@/components/animations/ScrollReveal'
@@ -86,25 +86,24 @@ export default async function TourDetailPage({ params }: Props) {
         {/* Hero content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
           <div className="max-w-3xl">
-            <span className="section-label text-[#E8C04A] mb-3 block">{tour.countries.join(' · ')}</span>
+            <p className="text-xs text-[#E8C04A] font-body uppercase tracking-widest mb-3">{tour.countries.join(' · ')}</p>
             <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white leading-tight mb-4">
               {tour.title}
             </h1>
             <div className="flex flex-wrap items-center gap-4 mb-6">
-              <span className="flex items-center gap-1.5 text-sm text-white/80 font-body">
-                <Clock size={15} className="text-[#E8C04A]" />
+              <span className="text-sm text-white/80 font-body">
                 {tour.durationDays.min} days
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-white/80 font-body">
-                <Users size={15} className="text-[#E8C04A]" />
+              <span className="text-white/30">·</span>
+              <span className="text-sm text-white/80 font-body">
                 Up to {tour.groupSize.max} guests
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-white/80 font-body">
-                <Car size={15} className="text-[#E8C04A]" />
+              <span className="text-white/30">·</span>
+              <span className="text-sm text-white/80 font-body">
                 Private vehicle
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-white/80 font-body">
-                <MapPin size={15} className="text-[#E8C04A]" />
+              <span className="text-white/30">·</span>
+              <span className="text-sm text-white/80 font-body">
                 Handpicked hotels
               </span>
             </div>
@@ -156,7 +155,7 @@ export default async function TourDetailPage({ params }: Props) {
             {/* Overview */}
             <ScrollReveal>
               <div>
-                <span className="section-label mb-2 block">Overview</span>
+                <div className="section-divider" />
                 <p className="text-[#4A4A3C] font-body leading-relaxed text-base">
                   {tour.description}
                 </p>
@@ -172,7 +171,7 @@ export default async function TourDetailPage({ params }: Props) {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {tour.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-sm text-[#4A4A3C] font-body">
-                      <CheckCircle size={16} className="text-[#12442E] mt-0.5 shrink-0" />
+                      <span className="text-[#12442E] font-bold mt-0.5 shrink-0">✓</span>
                       {h}
                     </li>
                   ))}
@@ -203,8 +202,7 @@ export default async function TourDetailPage({ params }: Props) {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="bg-[#F4EFE4] rounded-xl p-6">
-                  <h3 className="font-heading text-lg font-semibold text-[#1A1A14] mb-4 flex items-center gap-2">
-                    <CheckCircle size={18} className="text-[#2D7A4F]" />
+                  <h3 className="font-heading text-lg font-semibold text-[#1A1A14] mb-4">
                     What&apos;s included
                   </h3>
                   <ul className="space-y-2">
@@ -217,8 +215,7 @@ export default async function TourDetailPage({ params }: Props) {
                   </ul>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-[#EDE8DE]">
-                  <h3 className="font-heading text-lg font-semibold text-[#1A1A14] mb-4 flex items-center gap-2">
-                    <XCircle size={18} className="text-[#8A8A7A]" />
+                  <h3 className="font-heading text-lg font-semibold text-[#1A1A14] mb-4">
                     Not included
                   </h3>
                   <ul className="space-y-2">
@@ -249,11 +246,11 @@ export default async function TourDetailPage({ params }: Props) {
                     <p className="text-xs text-[#8A8A7A] font-body mt-2">Indicative pricing — every journey is tailored. WhatsApp us for your personalised quote.</p>
                   </div>
                   <ul className="space-y-2 text-sm text-[#4A4A3C] font-body mb-5">
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />{tour.durationDays.min} days / {tour.durationDays.min - 1} nights</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Groups of {tour.groupSize.min}–{tour.groupSize.max}</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Private vehicle, no shared transfers</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Handpicked hotel accommodation</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#12442E]" />Daily breakfast included</li>
+                    <li className="flex items-center gap-2"><span className="text-[#12442E] font-bold">✓</span>{tour.durationDays.min} days / {tour.durationDays.min - 1} nights</li>
+                    <li className="flex items-center gap-2"><span className="text-[#12442E] font-bold">✓</span>Groups of {tour.groupSize.min}–{tour.groupSize.max}</li>
+                    <li className="flex items-center gap-2"><span className="text-[#12442E] font-bold">✓</span>Private vehicle, no shared transfers</li>
+                    <li className="flex items-center gap-2"><span className="text-[#12442E] font-bold">✓</span>Handpicked hotel accommodation</li>
+                    <li className="flex items-center gap-2"><span className="text-[#12442E] font-bold">✓</span>Daily breakfast included</li>
                   </ul>
                   <a
                     href={getWhatsAppUrl(whatsappMsg)}

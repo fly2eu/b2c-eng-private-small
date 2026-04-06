@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle, Car, Shield, Clock, MapPin, Users, GraduationCap, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import ScrollReveal, { StaggerChildren, StaggerItem } from '@/components/animations/ScrollReveal'
 import WhatsAppButton from '@/components/forms/WhatsAppButton'
@@ -15,32 +15,26 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: MapPin,
     title: 'France-rooted, Europe-experienced',
     body: 'Our founders came to France for higher education — PhD and Masters programmes. They lived in Europe for years, worked there, and traveled the continent obsessively. Every route recommendation comes from that lived knowledge.',
   },
   {
-    icon: Car,
     title: 'We\'ve driven every route',
     body: 'Every road on our itineraries, we\'ve driven ourselves. Not a single recommendation is on our programmes because it looked good on paper.',
   },
   {
-    icon: GraduationCap,
     title: 'Academic rigor in every itinerary',
     body: 'PhD-level research applied to travel planning. We study the roads, the weather patterns, the check-in times, and the logistics so you don\'t have to.',
   },
   {
-    icon: Clock,
     title: '24/7 on-trip support',
     body: 'Something changes — a road closure, a late flight, a restaurant recommendation at 10pm. Message us. We respond. Real people who know Europe.',
   },
   {
-    icon: Users,
     title: 'Built for Indian & GCC travelers',
     body: 'We understand what makes a trip work for Indian families, GCC couples, and mixed groups — pace, comfort, dietary needs, the desire for privacy and flexibility.',
   },
   {
-    icon: CheckCircle,
     title: 'Detail-obsessed',
     body: 'Hotels are vetted. Parking is confirmed before every stop. Check-in times are coordinated with your arrival. Every detail — handled.',
   },
@@ -93,7 +87,6 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <span className="section-label text-[#E8C04A] mb-3 block">About us</span>
             <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mb-4 max-w-2xl">
               Founded by Europeans-by-experience.
             </h1>
@@ -108,7 +101,7 @@ export default function AboutPage() {
       <SectionWrapper variant="warm">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
-            <span className="section-label mb-3 block">Our story</span>
+            <div className="section-divider" />
             <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mb-5">
               We came for higher education. We stayed for the roads.
             </h2>
@@ -166,8 +159,8 @@ export default function AboutPage() {
       <SectionWrapper variant="section">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <span className="section-label">How we work</span>
-            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mt-2">
+            <div className="section-divider mx-auto" />
+            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14]">
               What makes an Elide journey different
             </h2>
           </div>
@@ -175,10 +168,7 @@ export default function AboutPage() {
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {values.map((v, i) => (
             <StaggerItem key={i}>
-              <div className="bg-white rounded-xl p-6 border border-[#EDE8DE] h-full">
-                <div className="w-10 h-10 rounded-lg bg-[#DAA521]/10 flex items-center justify-center mb-4">
-                  <v.icon size={20} className="text-[#DAA521]" />
-                </div>
+              <div className="h-full py-6 border-t border-[#DDD8CC]">
                 <h3 className="font-heading text-lg font-semibold text-[#1A1A14] mb-2">{v.title}</h3>
                 <p className="text-sm text-[#4A4A3C] font-body leading-relaxed">{v.body}</p>
               </div>
@@ -191,8 +181,8 @@ export default function AboutPage() {
       <SectionWrapper variant="warm">
         <ScrollReveal>
           <div className="text-center mb-10">
-            <span className="section-label">Trust & Credentials</span>
-            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mt-2">
+            <div className="section-divider mx-auto" />
+            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14]">
               Our commitment to you
             </h2>
           </div>
@@ -221,8 +211,7 @@ export default function AboutPage() {
         {/* Testimonial placeholders */}
         <ScrollReveal>
           <div className="text-center mb-8">
-            <span className="section-label">Client voices</span>
-            <h3 className="font-heading text-2xl font-semibold text-[#1A1A14] mt-2">
+            <h3 className="font-heading text-2xl font-semibold text-[#1A1A14]">
               What our clients say
             </h3>
           </div>
@@ -246,8 +235,8 @@ export default function AboutPage() {
       <SectionWrapper id="fleet" variant="section">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <span className="section-label">The fleet</span>
-            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mt-2">
+            <div className="section-divider mx-auto" />
+            <h2 className="font-heading text-3xl font-semibold text-[#1A1A14]">
               A premium vehicle for every group size
             </h2>
             <p className="text-[#4A4A3C] font-body mt-3 max-w-xl mx-auto">

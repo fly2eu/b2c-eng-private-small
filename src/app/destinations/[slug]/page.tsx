@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Calendar, MapPin } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import TourCard from '@/components/ui/TourCard'
 import ScrollReveal, { StaggerChildren, StaggerItem } from '@/components/animations/ScrollReveal'
@@ -68,7 +68,6 @@ export default async function DestinationPage({ params }: Props) {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
           <div className="max-w-2xl">
-            <span className="section-label text-[#E8C04A] mb-3 block">Destination</span>
             <h1 className="font-heading text-5xl font-semibold text-white mb-3">
               {dest.name}
             </h1>
@@ -84,12 +83,11 @@ export default async function DestinationPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
             <ScrollReveal>
-              <span className="section-label mb-2 block">About {dest.name}</span>
+              <div className="section-divider" />
               <p className="text-[#4A4A3C] font-body leading-relaxed text-base mb-6">
                 {dest.description}
               </p>
               <div className="flex items-start gap-2 text-sm text-[#4A4A3C] font-body">
-                <Calendar size={15} className="text-[#DAA521] mt-0.5 shrink-0" />
                 <span><strong className="text-[#1A1A14]">Best time to visit:</strong> {dest.bestTime}</span>
               </div>
             </ScrollReveal>
@@ -102,7 +100,7 @@ export default async function DestinationPage({ params }: Props) {
                 <ul className="space-y-2.5">
                   {dest.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#4A4A3C] font-body">
-                      <MapPin size={13} className="text-[#DAA521] mt-0.5 shrink-0" />
+                      <span className="text-[#DAA521] mt-0.5 shrink-0">—</span>
                       {h}
                     </li>
                   ))}
@@ -130,7 +128,7 @@ export default async function DestinationPage({ params }: Props) {
       {destTours.length > 0 ? (
         <SectionWrapper variant="section">
           <ScrollReveal>
-            <span className="section-label mb-2 block">{dest.name} programmes</span>
+            <div className="section-divider" />
             <h2 className="font-heading text-3xl font-semibold text-[#1A1A14] mb-8">
               Journeys through {dest.name}
             </h2>
