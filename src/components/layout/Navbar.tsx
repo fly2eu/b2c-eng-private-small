@@ -41,10 +41,10 @@ export default function Navbar() {
             scrolled ? 'py-3' : 'py-5'
           )}>
             {/* Logo */}
-            <div className="flex flex-col">
+            <div className="flex flex-col items-start">
               <Logo variant={scrolled ? 'dark' : 'light'} size={scrolled ? 'sm' : 'md'} />
               <span className={cn(
-                'text-[9px] font-body font-medium tracking-[0.18em] uppercase transition-colors duration-300',
+                'text-[9px] font-body font-medium tracking-[0.18em] uppercase transition-colors duration-300 pl-0',
                 scrolled ? 'text-[#8A8A7A]' : 'text-white/50'
               )}>
                 Private European Journeys
