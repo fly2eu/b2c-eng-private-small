@@ -41,7 +41,7 @@ export default function Navbar() {
             scrolled ? 'py-3' : 'py-5'
           )}>
             {/* Logo */}
-            <Logo variant={scrolled ? 'dark' : 'light'} size="sm" />
+            <Logo variant={scrolled ? 'dark' : 'light'} size={scrolled ? 'sm' : 'md'} />
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">

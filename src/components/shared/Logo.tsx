@@ -8,9 +8,9 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-// Doubled from original sizes as per Part 3B instructions
-const widths = { sm: 200, md: 260, lg: 320 }
-const heights = { sm: 52, md: 68, lg: 84 }
+// sm = compact (scrolled navbar), md = default navbar, lg = standalone/hero
+const widths = { sm: 240, md: 340, lg: 420 }
+const heights = { sm: 64, md: 88, lg: 110 }
 
 export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
   const w = widths[size]
