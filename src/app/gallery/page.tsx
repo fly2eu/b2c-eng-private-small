@@ -126,7 +126,7 @@ const galleryImages = [
   },
   // Fleet
   {
-    src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80&auto=format',
+    src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80&auto=format',
     alt: 'Premium vehicle interior — Elide fleet',
     category: 'Fleet',
     caption: 'Your vehicle for the next nine days',

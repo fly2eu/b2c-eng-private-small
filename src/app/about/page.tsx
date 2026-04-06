@@ -52,7 +52,7 @@ const fleet = [
     for: 'Couples & small groups',
     guests: '1–3 guests',
     features: ['All-wheel drive for mountain roads', 'WiFi, water, leather interiors', 'Ideal for couples and small groups'],
-    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80&auto=format',
+    image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80&auto=format',
   },
   {
     name: 'V-Class (or equivalent)',

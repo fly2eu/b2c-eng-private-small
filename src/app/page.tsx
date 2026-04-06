@@ -447,7 +447,7 @@ export default function HomePage() {
           <ScrollReveal direction="right">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=85&auto=format"
+                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=85&auto=format"
                 alt="Premium vehicle interior — Elide private tours"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
